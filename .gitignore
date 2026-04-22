@@ -1,0 +1,10 @@
+.DS_Store
+__pycache__/
+*.pyc
+
+# Intermediate parser outputs (regenerable from new pictures/)
+catalog.csv
+parse.err
+ocr/
+ocr_new/
+rotated/
