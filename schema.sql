@@ -64,6 +64,15 @@ CREATE TABLE IF NOT EXISTS species (
     research_sources    TEXT,                -- URLs / refs used in Phase 2
     last_researched_at  TEXT,                -- ISO date
 
+    -- Image metadata (populated by find_images.py from Wikimedia Commons).
+    image_url           TEXT,                -- direct full-res CDN URL
+    image_thumb_url     TEXT,                -- ~400px wide thumbnail
+    image_source_file   TEXT,                -- "File:..." title for attribution
+    image_confidence    TEXT,                -- high / medium / low / none
+    image_search_query  TEXT,                -- query that produced the match
+    image_search_links  TEXT,                -- JSON [{name,url}] of fallback search URLs
+    image_fetched_at    TEXT,                -- ISO date
+
     UNIQUE(genus, species, cultivar)
 );
 

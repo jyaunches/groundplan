@@ -8,3 +8,7 @@ parse.err
 ocr/
 ocr_new/
 rotated/
+
+# Local backups and run logs
+*.db.bak
+*.log
