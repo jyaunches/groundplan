@@ -66,6 +66,12 @@ CREATE TABLE IF NOT EXISTS species (
     research_confidence TEXT,                -- high (cultivar match) / medium (species match) / low / none
     last_researched_at  TEXT,                -- ISO date
 
+    -- Native-status (populated from USDA PLANTS + PA DCNR native list)
+    usda_symbol         TEXT,                -- e.g. "ACRU" for Acer rubrum (species-level; cultivars inherit)
+    usda_native_l48     INTEGER,             -- 0/1 bool — native to the Lower 48 per USDA
+    native_to_pa        INTEGER,             -- 0/1 bool — on the authoritative PA native plant list
+    pa_native_source    TEXT,                -- which PA list the flag came from (URL/name)
+
     -- Image metadata (populated by find_images.py from Wikimedia Commons).
     image_url           TEXT,                -- direct full-res CDN URL
     image_thumb_url     TEXT,                -- ~400px wide thumbnail

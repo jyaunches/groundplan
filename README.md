@@ -100,6 +100,42 @@ Per row:
 
 **Coverage on 402 species rows:** 86% match rate (55 cultivar-specific, 229 species-level, 46 genus-area, 55 no-match, 17 non-plant skipped).
 
+### 8. Native status — `tag_usda_native.py` + `tag_pa_native.py`
+
+Two-pass tagging for whether a plant is native to the Lower 48 (continental US) and, specifically, to Pennsylvania.
+
+**Pass A — `tag_usda_native.py`**. Hits the USDA PLANTS Database public JSON API:
+- Search: `GET /api/PlantSearch?searchText={Genus species}` → returns candidate rows with USDA `Symbol`.
+- Profile: `GET /api/PlantProfile?symbol={symbol}` → returns `NativeStatuses` per region (`L48`, `CAN`, `HI`, `AK`, `PR`, `VI`).
+- A plant is **L48-native** if `NativeStatuses` contains any `Region=L48, Type=Native` entry (even if also labeled Introduced somewhere — e.g. Phragmites australis has both native and introduced populations in the L48).
+- USDA tracks at species level (not cultivars), so one lookup per distinct `(genus, species)` is propagated to every cultivar of that species.
+- Writes `usda_symbol` (e.g. `ACRU`) and `usda_native_l48` (0/1) onto `species`.
+
+**Pass B — `tag_pa_native.py`**. Cross-references against the official PA DCNR Natural Heritage Program vascular plant checklist:
+- Source: `https://www.naturalheritage.dcnr.pa.gov/PlantChecklist.html`
+- Data URL: `https://www.naturalheritage.dcnr.pa.gov/docs/PlantChecklist.txt` (JSON, ~560 KB)
+- Fields: `Sciname`, `ConceptAlt`, `Comname`, `Nativity`, `Family`. Nativity is one of `Native`, `Native*`, `Introduced`, `Introduced*`, `Uncertain`.
+- Based on the 2023 PA version of Flora of the Southeastern United States, adopted as PNHP's taxonomic standard. 3,586 records covering every vascular plant known to grow outside cultivation in PA.
+
+Match rules on our `(genus, species)` pairs:
+1. Exact match on `"{Genus} {species}"` (title case).
+2. For compound/infraspecific species like `palmatum dissectum`, fall back to `"{Genus} {first-word}"` (also matches checklist rows like `Acer saccharum var. saccharum` via a binomial index).
+
+Outcome → `native_to_pa`:
+- **1** if checklist `Nativity` starts with `Native`.
+- **0** if checklist says `Introduced`, OR if the taxon is absent from the checklist entirely (PNHP's list is exhaustive for plants growing outside cultivation in PA, so absence is evidence of "not naturally occurring in PA — purely ornamental").
+- **NULL** only for rows with no species (bare genus) or Uncertain nativity.
+
+`pa_native_source` always carries the checklist URL + ISO timestamp when a classification was made — with a `(not listed)` suffix for the absent case, so the React app can distinguish "checked and absent" from "not yet checked" (NULL).
+
+**Coverage on 174 unique taxa × 402 catalog rows:**
+- **51 species rows flagged PA native** (27 distinct taxa — all verified against PNHP)
+- 95 rows explicitly `Introduced` per PNHP
+- 158 rows absent from the PA checklist (ornamental-only, not growing wild in PA)
+- Notable: **37 rows are L48-native per USDA but not in PA per PNHP** — plants native to other regions of the continental US but not PA.
+
+Known PNHP calls that surprise the garden-center definition: `Thuja occidentalis` (Northern White Cedar) is flagged `Introduced` in PA — native to Canada and the northern Great Lakes, but PNHP considers all PA occurrences escaped from cultivation.
+
 ### Data-quality caveats
 
 - **`sun_exposure` is single-valued.** NC State generally labels each plant with one dominant light preference, not a range. Classic part-shade plants (Hydrangea quercifolia, Cornus florida) are labeled `full sun` on their side. To find plants suitable for shade beds, filter `sun_exposure IN ('dappled','full shade')` — don't expect a "partial shade" bucket.
@@ -126,6 +162,11 @@ python3 find_images.py --rerun-low
 python3 research_species.py
 python3 research_species.py 10        # smoke-test 10 rows
 python3 research_species.py --rerun-low
+
+# Native status: USDA pass then PA DCNR cross-reference
+python3 tag_usda_native.py
+python3 tag_usda_native.py --rerun
+python3 tag_pa_native.py
 ```
 
 All scripts commit per-row to SQLite, so interrupted runs resume cleanly.
@@ -141,6 +182,7 @@ species (
   deer_resistance, rabbit_resistance, drought_tolerance, wind_tolerance,
   bloom_time, bloom_color, fall_color, evergreen, native_to_north_america,
   research_sources, research_confidence, last_researched_at,
+  usda_symbol, usda_native_l48, native_to_pa, pa_native_source,
   image_url, image_thumb_url, image_source_file,
   image_confidence, image_search_query, image_search_links, image_fetched_at,
   UNIQUE(genus, species, cultivar)
