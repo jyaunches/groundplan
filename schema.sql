@@ -52,6 +52,7 @@ CREATE TABLE IF NOT EXISTS species (
     deer_resistance     TEXT,                -- high / medium / low / unknown
     rabbit_resistance   TEXT,
     drought_tolerance   TEXT,
+    wind_tolerance      TEXT,                -- high / medium / low / unknown (mountainside site)
 
     -- Ornamental
     bloom_time          TEXT,
@@ -61,7 +62,8 @@ CREATE TABLE IF NOT EXISTS species (
     native_to_north_america INTEGER,         -- 0/1 boolean
 
     notes               TEXT,
-    research_sources    TEXT,                -- URLs / refs used in Phase 2
+    research_sources    TEXT,                -- URLs / refs used in Phase 2 (JSON array)
+    research_confidence TEXT,                -- high (cultivar match) / medium (species match) / low / none
     last_researched_at  TEXT,                -- ISO date
 
     -- Image metadata (populated by find_images.py from Wikimedia Commons).
