@@ -1,5 +1,11 @@
 import type { Species } from '../types'
 
+type CardProps = {
+  s: Species
+  shortlisted: boolean
+  onToggleShortlist: (id: number) => void
+}
+
 function googleImagesUrl(s: Species): string {
   // Build a tight query so cultivar matches over generic genus pages.
   const parts = [s.genus, s.species, s.cultivar].filter(Boolean).join(' ')
@@ -23,7 +29,7 @@ function Badge({
   )
 }
 
-export function SpeciesCard({ s }: { s: Species }) {
+export function SpeciesCard({ s, shortlisted, onToggleShortlist }: CardProps) {
   const sci = [s.genus, s.species].filter(Boolean).join(' ').toLowerCase()
   const sciDisplay = sci.charAt(0).toUpperCase() + sci.slice(1)
   const zone = s.hardiness_zone_min && s.hardiness_zone_max
@@ -65,20 +71,35 @@ export function SpeciesCard({ s }: { s: Species }) {
             </h3>
             <p className="truncate text-sm italic text-stone-500">{sciDisplay}</p>
           </div>
-          <div className="text-right">
-            {s.min_price !== null && (
-              <p className="text-base font-semibold text-stone-900">
-                ${s.min_price.toFixed(0)}
-                {s.max_price !== null && s.max_price !== s.min_price && (
-                  <span className="text-stone-400">–${s.max_price.toFixed(0)}</span>
-                )}
-              </p>
-            )}
-            {s.offerings.length > 0 && (
-              <p className="text-xs text-stone-500">
-                {s.offerings.length} offering{s.offerings.length > 1 ? 's' : ''}
-              </p>
-            )}
+          <div className="flex items-start gap-2">
+            <div className="text-right">
+              {s.min_price !== null && (
+                <p className="text-base font-semibold text-stone-900">
+                  ${s.min_price.toFixed(0)}
+                  {s.max_price !== null && s.max_price !== s.min_price && (
+                    <span className="text-stone-400">–${s.max_price.toFixed(0)}</span>
+                  )}
+                </p>
+              )}
+              {s.offerings.length > 0 && (
+                <p className="text-xs text-stone-500">
+                  {s.offerings.length} offering{s.offerings.length > 1 ? 's' : ''}
+                </p>
+              )}
+            </div>
+            <button
+              type="button"
+              onClick={() => onToggleShortlist(s.id)}
+              title={shortlisted ? 'Remove from shortlist' : 'Add to shortlist'}
+              aria-pressed={shortlisted}
+              className={`-mr-1 rounded p-1 text-2xl leading-none transition ${
+                shortlisted
+                  ? 'text-rose-500 hover:text-rose-600'
+                  : 'text-stone-300 hover:text-rose-400'
+              }`}
+            >
+              {shortlisted ? '♥' : '♡'}
+            </button>
           </div>
         </div>
 
