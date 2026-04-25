@@ -54,6 +54,9 @@ CREATE TABLE IF NOT EXISTS species (
     drought_tolerance   TEXT,
     wind_tolerance      TEXT,                -- high / medium / low / unknown (mountainside site)
 
+    -- Plant type from NC State (tree / shrub / ground cover / vine / perennial / etc.)
+    plant_type          TEXT,
+
     -- Ornamental
     bloom_time          TEXT,
     bloom_color         TEXT,
