@@ -1,5 +1,12 @@
 import type { Species } from '../types'
 
+function googleImagesUrl(s: Species): string {
+  // Build a tight query so cultivar matches over generic genus pages.
+  const parts = [s.genus, s.species, s.cultivar].filter(Boolean).join(' ')
+  const query = `${parts} plant`.trim()
+  return `https://www.google.com/search?tbm=isch&q=${encodeURIComponent(query)}`
+}
+
 function Badge({
   children, tone = 'stone',
 }: { children: React.ReactNode; tone?: 'stone' | 'emerald' | 'amber' | 'sky' }) {
@@ -26,7 +33,13 @@ export function SpeciesCard({ s }: { s: Species }) {
 
   return (
     <article className="flex gap-3 rounded-lg border border-stone-200 bg-white p-3 shadow-sm transition hover:shadow-md">
-      <div className="h-24 w-24 shrink-0 overflow-hidden rounded bg-stone-100">
+      <a
+        href={s.image_url || googleImagesUrl(s)}
+        target="_blank"
+        rel="noopener noreferrer"
+        title={s.image_url ? 'Open full-size image' : 'Search images'}
+        className="h-24 w-24 shrink-0 overflow-hidden rounded bg-stone-100"
+      >
         {s.image_thumb_url ? (
           <img
             src={s.image_thumb_url}
@@ -39,7 +52,7 @@ export function SpeciesCard({ s }: { s: Species }) {
             no image
           </div>
         )}
-      </div>
+      </a>
 
       <div className="min-w-0 flex-1">
         <div className="flex items-start justify-between gap-2">
@@ -78,13 +91,21 @@ export function SpeciesCard({ s }: { s: Species }) {
           {s.drought_tolerance === 'high' && <Badge tone="amber">Drought tolerant</Badge>}
         </div>
 
-        <div className="mt-1.5 flex flex-wrap gap-x-3 gap-y-0.5 text-xs text-stone-600">
+        <div className="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-0.5 text-xs text-stone-600">
           {zone && <span>{zone}</span>}
           {ht && <span>{ht} tall</span>}
           {s.sun_exposure && <span className="capitalize">{s.sun_exposure}</span>}
           {s.bloom_time && s.bloom_color && (
             <span>{s.bloom_color} blooms · {s.bloom_time}</span>
           )}
+          <a
+            href={googleImagesUrl(s)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-auto text-emerald-700 hover:text-emerald-900 hover:underline"
+          >
+            More images ↗
+          </a>
         </div>
       </div>
     </article>
