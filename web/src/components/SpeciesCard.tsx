@@ -1,4 +1,5 @@
-import type { Species } from '../types'
+import type { Offering, Species } from '../types'
+import { estimateYearsTo20Ft, formatOfferingSize } from '../growth'
 
 type CardProps = {
   s: Species
@@ -29,6 +30,29 @@ function Badge({
   )
 }
 
+function offeringLabel(o: Offering): string {
+  const size = formatOfferingSize(o.size)
+  const parts: string[] = []
+  if (size && size !== '—') parts.push(size)
+  if (o.container) parts.push(o.container)
+  if (o.form) parts.push(o.form)
+  return parts.join(' ') || '—'
+}
+
+function formatYears(min: number, max: number): string {
+  if (max === 0) return 'already 20 ft+'
+  const a = Math.max(1, Math.round(min))
+  const b = Math.max(a, Math.round(max))
+  return a === b ? `~${a} yr${a === 1 ? '' : 's'}` : `${a}–${b} yrs`
+}
+
+const RATE_TOOLTIP: Record<string, string> = {
+  slow: 'Slow = 6–12 in/yr (juvenile phase)',
+  medium: 'Medium = 12–24 in/yr (juvenile phase)',
+  rapid: 'Rapid = 24–36 in/yr (juvenile phase)',
+  fast: 'Fast = 24–36 in/yr (juvenile phase)',
+}
+
 export function SpeciesCard({ s, shortlisted, onToggleShortlist }: CardProps) {
   const sci = [s.genus, s.species].filter(Boolean).join(' ').toLowerCase()
   const sciDisplay = sci.charAt(0).toUpperCase() + sci.slice(1)
@@ -36,6 +60,7 @@ export function SpeciesCard({ s, shortlisted, onToggleShortlist }: CardProps) {
     ? `Zone ${s.hardiness_zone_min}–${s.hardiness_zone_max}`
     : null
   const ht = s.mature_height_ft ? `${s.mature_height_ft} ft` : null
+  const estimate = estimateYearsTo20Ft(s)
 
   return (
     <article className="flex gap-3 rounded-lg border border-stone-200 bg-white p-3 shadow-sm transition hover:shadow-md">
@@ -79,11 +104,6 @@ export function SpeciesCard({ s, shortlisted, onToggleShortlist }: CardProps) {
                   {s.max_price !== null && s.max_price !== s.min_price && (
                     <span className="text-stone-400">–${s.max_price.toFixed(0)}</span>
                   )}
-                </p>
-              )}
-              {s.offerings.length > 0 && (
-                <p className="text-xs text-stone-500">
-                  {s.offerings.length} offering{s.offerings.length > 1 ? 's' : ''}
                 </p>
               )}
             </div>
@@ -144,6 +164,33 @@ export function SpeciesCard({ s, shortlisted, onToggleShortlist }: CardProps) {
             More images ↗
           </a>
         </div>
+
+        {estimate && s.growth_rate && (
+          <div
+            className="mt-2 rounded border border-emerald-200 bg-emerald-50 px-2 py-1 text-xs text-emerald-900"
+            title={`${RATE_TOOLTIP[s.growth_rate.toLowerCase()] ?? ''}. Mountainside conditions will shift toward the slow end.`}
+          >
+            <span className="font-semibold capitalize">{s.growth_rate}</span> grower — 20 ft in{' '}
+            <span className="font-semibold">{formatYears(estimate.minYrs, estimate.maxYrs)}</span>
+            {' '}from {estimate.startHeight.label}.
+          </div>
+        )}
+
+        {s.offerings.length > 0 && (
+          <div className="mt-2 border-t border-stone-100 pt-1.5">
+            <div className="text-xs font-medium text-stone-500">
+              Sizes available ({s.offerings.length})
+            </div>
+            <ul className="mt-0.5 flex flex-wrap gap-x-3 gap-y-0.5 text-xs text-stone-700">
+              {s.offerings.map((o, i) => (
+                <li key={i} className="whitespace-nowrap">
+                  {offeringLabel(o)}{' '}
+                  <span className="font-semibold text-stone-900">${o.price.toFixed(0)}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </article>
   )
