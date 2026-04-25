@@ -1,0 +1,143 @@
+# Landscaping plan — central PA mountainside, USDA zone 6b–7a.
+#
+# Each area has site conditions and a plant list. Plants are tagged with their
+# source (Diller catalog vs find-elsewhere) so we know what to order from where.
+# Quantities are the maximalist starting point — we'll trim as plants mature.
+#
+# When this list firms up across all areas, a sync script will load it into
+# the SQLite DB (areas + plan_items tables) and the React app will render it
+# read-only as a planning view.
+
+areas:
+  - name: Front foundation corner
+    approx_sqft: 64                   # ~8x8 ft, possibly slightly larger
+    sun: full shade                   # bright open shade — no direct sun, but bright reflected light
+    exposure: |
+      North-facing front-of-house corner. Sheltered by the house from the
+      mountain wind (low wind exposure regardless of plant ratings).
+      Bright afternoon sun passes by but never lands directly. High indirect
+      light all day — ideal "bright open shade" conditions.
+    deer_pressure: minimal             # right by front door; deer haven't been observed here
+    theme: layered shade with year-round interest
+    notes: |
+      Visible from front door year-round, so winter interest matters.
+      Bloom calendar: Hellebores Feb–Apr, Pulmonaria/Tiarella/Dicentra
+      Mar–May, Astilbe + Hosta Jun–Jul, Hydrangea + Hosta Jul–Aug,
+      Bugbane + Mahonia + Hakonechloa fall color Aug–Oct, Mahonia
+      yellow blooms Feb. Something visible every month.
+
+    plants:
+      # Anchors (back of corner)
+      - name: Cephalotaxus harringtonia 'Duke Garden'
+        common_name: Japanese Plum Yew
+        quantity: 1
+        source: Diller
+        role: Evergreen needled anchor shrub, ~7.5 ft mature, deer-resistant, wind-rated high
+
+      - name: Mahonia x media 'Winter Sun'
+        common_name: Mahonia
+        quantity: 1
+        source: Diller
+        role: Second anchor — evergreen holly-like leaves with bright yellow Feb–Mar blooms
+
+      # Mid-layer flowering shrub
+      - name: Hydrangea arborescens 'Annabelle'
+        common_name: Smooth Hydrangea
+        quantity: 1
+        source: Diller
+        role: White snowball blooms June–September, shade-tolerant, ~4 ft, blooms on new wood
+
+      # Mid-layer evergreen perennial
+      - name: Helleborus orientalis 'Ivory Prince'
+        common_name: Lenten Rose
+        quantity: 3
+        source: Diller
+        role: Evergreen perennial, late winter / early spring blooms, deer-resistant
+
+      # Spring ephemeral
+      - name: Dicentra spectabilis
+        common_name: Old-Fashioned Bleeding Heart
+        quantity: 1
+        source: Diller
+        role: Pink heart-shaped spring blooms, dies back midsummer
+
+      # Early-summer plumes
+      - name: Astilbe 'Deutschland'
+        common_name: Astilbe (white)
+        quantity: 3
+        source: Diller
+        role: Feathery white plumes June–July, ferny foliage all season
+
+      # Bold foliage statement
+      - name: Hosta 'Sum and Substance'
+        common_name: Giant Chartreuse Hosta
+        quantity: 1
+        source: Find elsewhere    # Bluestone Perennials, local nursery
+        role: Statement large hosta, ~4 ft wide chartreuse foliage; deer-vulnerable but unlikely here
+
+      - name: Hosta 'Patriot'
+        common_name: Variegated Hosta
+        quantity: 2
+        source: Find elsewhere
+        role: Mid-size variegated white-edge, brightens corner
+
+      # Foliage palette (orange/burgundy via Heuchera)
+      - name: Heuchera 'Caramel'
+        common_name: Coral Bells (caramel)
+        quantity: 1
+        source: Diller
+        role: Caramel-orange foliage; deer-resistant alternative palette
+
+      - name: Heuchera 'Palace Purple'
+        common_name: Coral Bells (burgundy)
+        quantity: 1
+        source: Diller
+        role: Burgundy foliage all season
+
+      # Silver foliage / spring color
+      - name: Pulmonaria 'Mrs. Moon'
+        common_name: Lungwort
+        quantity: 3
+        source: Find elsewhere    # Bluestone Perennials
+        role: Silver-spotted leaves all season, pink-to-blue spring blooms
+
+      # Fall grass
+      - name: Hakonechloa macra 'Aureola'
+        common_name: Japanese Forest Grass
+        quantity: 3
+        source: Diller
+        role: Chartreuse arching grass; pink-copper fall color; needs bright indirect light to keep color
+
+      # Late-summer vertical accent
+      - name: Actaea racemosa
+        common_name: Black Cohosh / Bugbane
+        quantity: 1
+        source: Find elsewhere    # PA native nursery (Bowman's Hill) or Bluestone
+        role: PA native, 4–6 ft white spires August–September
+
+      # Sept-Oct bloom
+      - name: Tricyrtis hirta
+        common_name: Toad Lily
+        quantity: 2
+        source: Find elsewhere
+        role: Orchid-like spotted purple blooms September–October
+
+      # Native ground cover
+      - name: Tiarella cordifolia
+        common_name: Foamflower
+        quantity: 5
+        source: Find elsewhere    # PA native nursery (Bowman's Hill) preferred
+        role: PA native, white foamy spring spikes, red-bronze fall foliage, slowly spreading
+
+      # Fragrant ground cover
+      - name: Galium odoratum
+        common_name: Sweet Woodruff
+        quantity: 3
+        source: Diller
+        role: Full-shade ground cover; fragrant white May flowers; complements Tiarella texturally
+
+    # Total: 32 plants in 64 sqft. Maximalist density — trim as plants establish.
+    # Trim-first candidates if too dense after season 1:
+    #   - Drop one of the Heucheras (role covered by hostas + pulmonaria)
+    #   - Pulmonaria 3 → 2
+    #   - Tiarella 5 → 4 (they spread, gaps fill naturally)
