@@ -108,7 +108,23 @@ export function SpeciesCard({ s, shortlisted, onToggleShortlist }: CardProps) {
           {s.native_to_pa === 1 && <Badge tone="emerald">PA native</Badge>}
           {s.evergreen === 1 && <Badge tone="emerald">Evergreen</Badge>}
           {s.deer_resistance === 'high' && <Badge tone="amber">Deer resistant</Badge>}
-          {s.wind_tolerance === 'high' && <Badge tone="amber">Wind tolerant</Badge>}
+          {s.wind_tolerance && (
+            <span
+              title={s.wind_tolerance_reasoning ?? undefined}
+              className={
+                'inline-flex items-center rounded px-1.5 py-0.5 text-xs font-medium ' +
+                (s.wind_tolerance === 'high'
+                  ? 'bg-emerald-100 text-emerald-800'
+                  : s.wind_tolerance === 'moderate'
+                    ? 'bg-amber-100 text-amber-800'
+                    : s.wind_tolerance === 'low'
+                      ? 'bg-rose-100 text-rose-800'
+                      : 'bg-stone-100 text-stone-600')
+              }
+            >
+              Wind: {s.wind_tolerance}
+            </span>
+          )}
           {s.drought_tolerance === 'high' && <Badge tone="amber">Drought tolerant</Badge>}
         </div>
 

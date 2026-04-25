@@ -52,7 +52,9 @@ CREATE TABLE IF NOT EXISTS species (
     deer_resistance     TEXT,                -- high / medium / low / unknown
     rabbit_resistance   TEXT,
     drought_tolerance   TEXT,
-    wind_tolerance      TEXT,                -- high / medium / low / unknown (mountainside site)
+    wind_tolerance      TEXT,                -- high / moderate / low / unknown (mountainside site)
+    wind_tolerance_reasoning  TEXT,          -- short rationale (Claude judgment, central PA mountainside context)
+    wind_tolerance_confidence TEXT,          -- high / medium / low — flag rare cultivars for review
 
     -- Plant type from NC State (tree / shrub / ground cover / vine / perennial / etc.)
     plant_type          TEXT,

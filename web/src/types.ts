@@ -23,6 +23,8 @@ export type Species = {
   rabbit_resistance: string | null
   drought_tolerance: string | null
   wind_tolerance: string | null
+  wind_tolerance_reasoning: string | null
+  wind_tolerance_confidence: string | null
 
   bloom_time: string | null
   bloom_color: string | null
@@ -64,7 +66,7 @@ export type Filters = {
   height_min: number
   height_max: number
   deer_resistant: boolean
-  wind_tolerant: boolean
+  wind: 'any' | 'high' | 'safe' | 'exclude_low'  // any | only-high | high-or-moderate | exclude-low
   drought_tolerant: boolean
   evergreen: boolean
   native_to_pa: boolean

@@ -115,15 +115,23 @@ export function FilterSidebar({ filters, setFilters, reset, bounds }: Props) {
           label="Deer resistant"
         />
         <CheckRow
-          checked={filters.wind_tolerant}
-          onChange={v => setFilters({ ...filters, wind_tolerant: v })}
-          label="Wind tolerant"
-        />
-        <CheckRow
           checked={filters.drought_tolerant}
           onChange={v => setFilters({ ...filters, drought_tolerant: v })}
           label="Drought tolerant"
         />
+        <label className="block pt-1">
+          <span className="block text-xs text-stone-600">Wind tolerance</span>
+          <select
+            value={filters.wind}
+            onChange={e => setFilters({ ...filters, wind: e.target.value as typeof filters.wind })}
+            className="mt-1 w-full rounded border border-stone-300 bg-white px-2 py-1 text-sm"
+          >
+            <option value="any">Any</option>
+            <option value="high">High only (for exposed ridge)</option>
+            <option value="safe">Mountainside-safe (high or moderate)</option>
+            <option value="exclude_low">Exclude known fragile</option>
+          </select>
+        </label>
       </FilterSection>
 
       <FilterSection title="Native to PA" defaultOpen>

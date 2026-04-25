@@ -11,7 +11,7 @@ export function defaultFilters(species: Species[]): Filters {
     height_min: 0,
     height_max: heights.length ? Math.max(...heights) : 100,
     deer_resistant: false,
-    wind_tolerant: false,
+    wind: 'any',
     drought_tolerant: false,
     evergreen: false,
     native_to_pa: false,
@@ -51,7 +51,9 @@ export function applyFilters(species: Species[], f: Filters): Species[] {
       return false
     }
     if (f.deer_resistant && s.deer_resistance !== 'high') return false
-    if (f.wind_tolerant && s.wind_tolerance !== 'high') return false
+    if (f.wind === 'high' && s.wind_tolerance !== 'high') return false
+    if (f.wind === 'safe' && !(s.wind_tolerance === 'high' || s.wind_tolerance === 'moderate')) return false
+    if (f.wind === 'exclude_low' && s.wind_tolerance === 'low') return false
     if (f.drought_tolerant && s.drought_tolerance !== 'high') return false
     if (f.evergreen && s.evergreen !== 1) return false
     if (f.native_to_pa && s.native_to_pa !== 1) return false
