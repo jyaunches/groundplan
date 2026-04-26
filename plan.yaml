@@ -184,6 +184,44 @@ areas:
       #   role: Pair with Diller-sized tree for shade-now + shade-later staggering.
       #   timing: install Sept-Nov 2026 (optimal large-B&B window)
 
+  - name: Hillside flowering tree
+    sun: full sun                      # TODO confirm — assumed full sun, may be part sun if house casts a long shadow
+    exposure: |
+      Mountainside slope, planted a few feet above the bottom of the hill
+      (not at the very bottom — sited up the slope for good drainage and
+      to climb out of the cold-air pocket). House provides partial wind
+      shelter; some winter wind exposure remains.
+    deer_pressure: moderate            # mountainside; kousa rated high deer-resistance
+    theme: spring/summer flowering tree with year-round interest
+    notes: |
+      Site prep on a slope: level the planting hole into a small shelf,
+      build a low berm on the downhill side so water soaks the rootball
+      instead of running off. Mulch 3 in deep out to the dripline — kousa
+      is shallow-rooted and a slope dries faster than flat ground.
+      Color calendar: May-Jun green-aging-to-white bracts (4-6 weeks) →
+      Jul glossy green leaves → Aug-Sep pink-red strawberry-like fruits →
+      Oct scarlet-burgundy fall color → winter mottled exfoliating bark
+      + tiered horizontal branching.
+
+    plants:
+      - name: Cornus kousa 'Celestial'
+        common_name: Kousa Dogwood (Stellar series)
+        quantity: 1
+        source: Diller
+        target_size: 2.5-3" caliper (~10-12 ft tall, $187 — id 167)
+        alternatives:
+          - "6-7 ft B&B (id 170, $117) — value option, adds ~2 yrs to 'shade + flowers' timeline"
+          - "5-6 ft container (id 169, $92) — cheapest entry, adds ~3 yrs"
+        role: |
+          Hillside flowering tree. Heavy-blooming Stellar-series hybrid
+          (kousa × florida, Rutgers); white pointed bracts held upward
+          on tiered branches May-Jun, hold 4-6 weeks. Pink-red
+          raspberry-like fruits Aug-Sep (birds love them). Reliable
+          scarlet-burgundy fall color. Mottled exfoliating bark develops
+          after ~10 yrs for winter interest. Slow grower (12-18 in/yr);
+          2.5-3" cal start gets meaningful shade in 2-3 seasons.
+        status: planning to acquire 2026
+
   - name: Driveway entrance corner (mirrored)
     approx_sqft: 20                     # 4 ft × 5 ft each
     multiplier: 2                       # mirrored on both sides of entrance
