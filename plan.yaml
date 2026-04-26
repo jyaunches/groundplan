@@ -4,12 +4,18 @@
 # source (Diller catalog vs find-elsewhere) so we know what to order from where.
 # Quantities are the maximalist starting point — we'll trim as plants mature.
 #
+# Each area has a `slug` — a stable machine ID used to link the area to its
+# photo directory under `areas_originals/<slug>/`. Slugs starting with `sp*`
+# match the photographed beds; slugs without a `sp*` prefix (single-tree
+# placements like the Honeylocust and Kousa) intentionally have no photo dir.
+#
 # When this list firms up across all areas, a sync script will load it into
 # the SQLite DB (areas + plan_items tables) and the React app will render it
 # read-only as a planning view.
 
 areas:
   - name: Front foundation corner
+    slug: sp1_shade_front_door
     approx_sqft: 64                   # ~8x8 ft, possibly slightly larger
     sun: full shade                   # bright open shade — no direct sun, but bright reflected light
     exposure: |
@@ -143,6 +149,7 @@ areas:
     #   - Tiarella 5 → 4 (they spread, gaps fill naturally)
 
   - name: Driveway shade
+    slug: driveway_shade_tree         # single-tree placement — no photo dir
     sun: full sun
     exposure: |
       Open driveway alongside / edge planting. Goal is to shade the driveway
@@ -185,6 +192,7 @@ areas:
       #   timing: install Sept-Nov 2026 (optimal large-B&B window)
 
   - name: Hillside flowering tree
+    slug: hillside_kousa              # single-tree placement — no photo dir
     sun: full sun                      # TODO confirm — assumed full sun, may be part sun if house casts a long shadow
     exposure: |
       Mountainside slope, planted a few feet above the bottom of the hill
@@ -223,6 +231,7 @@ areas:
         status: planning to acquire 2026
 
   - name: Driveway entrance corner (mirrored)
+    slug: sp3_full_sun_driveway_sides
     approx_sqft: 20                     # 4 ft × 5 ft each
     multiplier: 2                       # mirrored on both sides of entrance
     sun: full sun
@@ -320,6 +329,7 @@ areas:
   # ↓ TOP BED — see below
 
   - name: Driveway top bed
+    slug: sp5_full_sun_driveway_top
     approx_sqft: 70                     # 14 ft × 5 ft
     sun: full sun
     exposure: |
@@ -504,3 +514,66 @@ areas:
   #   Heuchera 'Palace Purple' ×3    → swapped to Heuchera 'Caramel'
   #   Echinacea 'Cheyenne Spirit' ×5 → split to Echinacea 'Pow Wow White' (×5) + Echinacea 'Sundown' (×3)
   #   Allium 'Purple Sensation'      → swapped to Allium 'Mount Everest' (white)
+
+  # ============================================================
+  # STUBS — areas photographed but not yet planned.
+  # Site conditions inferred from directory name only; confirm
+  # against photos when filling in the plant list.
+  # ============================================================
+
+  - name: Garage afternoon-sun bed
+    slug: sp2_afternoon_sun_garage
+    sun: afternoon sun                 # TODO confirm — inferred from dir name
+    exposure: |
+      TODO — photos in areas_originals/sp2_afternoon_sun_garage/.
+      Likely west-facing alongside garage; afternoon sun + heat reflection
+      off siding/concrete possible. Confirm wind exposure and drainage.
+    plants: []                         # TODO
+
+  - name: Driveway lamp post bed
+    slug: sp4_full_sun_driveway_lamp
+    sun: full sun                      # from dir name
+    exposure: |
+      TODO — photos in areas_originals/sp4_full_sun_driveway_lamp/.
+      Bed around the driveway lamp post. Confirm sqft, soil, and whether
+      water access is available.
+    plants: []                         # TODO
+
+  - name: Main stairs bed
+    slug: sp6_full_sun_main_stairs
+    sun: full sun                      # from dir name
+    exposure: |
+      TODO — photos in areas_originals/sp6_full_sun_main_stairs/.
+      Confirm orientation (front entry stairs?), sqft, soil depth (often
+      shallow against stair foundations).
+    plants: []                         # TODO
+
+  - name: Pathway to paver bed
+    slug: sp7_full_sun_pathway_to_paver
+    sun: full sun                      # from dir name
+    exposure: |
+      TODO — photos in areas_originals/sp7_full_sun_pathway_to_paver/.
+      Linear bed alongside the path leading to the paver patio.
+      Confirm length, width, both-sides-or-one, foot-traffic considerations.
+    plants: []                         # TODO
+
+  - name: Paver corner beds
+    slug: sp8_part_sun_paver_corners
+    sun: part sun                      # from dir name
+    exposure: |
+      TODO — photos in areas_originals/sp8_part_sun_paver_corners/.
+      Corner beds at the paver patio. Part-sun suggests morning sun /
+      afternoon shade or filtered light. Confirm count (2 corners? 4?)
+      and sqft each.
+    plants: []                         # TODO
+
+  - name: Basement walkout bed
+    slug: sp9_shade_basementwalkout
+    sun: full shade                    # from dir name
+    exposure: |
+      TODO — photos in areas_originals/sp9_shade_basementwalkout/.
+      Bed at the basement walkout — likely below-grade, shaded by house
+      and surrounding stairs/walls. Confirm drainage (walkouts often
+      sit at low points and collect runoff) and how much reflected light
+      vs. true deep shade.
+    plants: []                         # TODO
