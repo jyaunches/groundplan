@@ -183,3 +183,189 @@ areas:
       #   target_size: 4-5" caliper (~17-20 ft tall, ~$2500-3500 installed)
       #   role: Pair with Diller-sized tree for shade-now + shade-later staggering.
       #   timing: install Sept-Nov 2026 (optimal large-B&B window)
+
+  - name: Driveway entrance corner (mirrored)
+    approx_sqft: 20                     # 4 ft × 5 ft each
+    multiplier: 2                       # mirrored on both sides of entrance
+    sun: full sun
+    exposure: |
+      Roadside corner planting at the driveway entrance. Open mountainside
+      with no overhead canopy. NO water access — these have to live on
+      rainfall alone after year 1. Drought-bombproof palette only. Mountain
+      wind exposure (the Spiraea anchor and Lavender are wind-tough).
+      Mirrored on both sides of the entrance for visual symmetry.
+    notes: |
+      Bloom calendar: Mar-Apr Daffodils → Apr-May Dianthus → May-Jul
+      Lavender + Allium → Jun-Sep Echinacea → Sep-Oct Sedum → winter
+      structural Spiraea + Lavender semi-evergreen + Sedum dried heads.
+      See plan_layouts/corner_layout.png for top-down spatial diagram.
+
+    plants:
+      # Back row (toward road, 1.5-2 ft tall)
+      - name: Spiraea japonica 'Goldmound'
+        common_name: Spiraea
+        quantity: 1
+        source: Diller
+        role: Back-center anchor; gold foliage Apr-Oct, pink flowers Jul
+
+      - name: Lavandula angustifolia 'Munstead'
+        common_name: English Lavender
+        quantity: 2
+        source: Diller
+        role: Back-flanking the anchor; purple Jun-Jul, semi-evergreen blue-grey winter foliage
+
+      # Mid row (1-1.5 ft tall)
+      - name: Echinacea purpurea 'Pow Wow White'
+        common_name: White Coneflower
+        quantity: 2
+        source: Diller
+        role: Mid-row drift; PA native, Jun-Sep blooms, drought-tolerant
+
+      - name: Sedum 'Autumn Joy'
+        common_name: Autumn Stonecrop
+        quantity: 3
+        source: Diller
+        role: Mid-front cluster; pink Sep-Oct + dried winter heads; indestructible
+
+      # Front edge (6 in tall)
+      - name: Dianthus 'Firewitch'
+        common_name: Cheddar Pinks
+        quantity: 3
+        source: Diller
+        role: Front edge mat; pink Apr-May, blue-grey foliage year-round
+
+      # Bulbs (fall plant for next spring)
+      - name: Allium 'Purple Sensation'
+        common_name: Ornamental Onion
+        quantity: 5
+        source: Find elsewhere    # mail-order bulb supplier (Brent and Becky's, Van Engelen, etc.)
+        role: Vertical accent — 2 ft purple drumsticks May-Jun; interplant in mid-row pockets between Sedums
+        timing: plant fall 2026 for spring 2027 bloom
+
+      - name: Narcissus 'Tête-à-Tête'
+        common_name: Mini Daffodil
+        quantity: 12
+        source: Find elsewhere
+        role: Earliest spring color — 6 in yellow Mar-Apr; deer-proof; interplant in front-edge pockets between Dianthus
+        timing: plant fall 2026
+
+    # Per corner: 11 perennials + 17 bulbs. ×2 (mirrored) = 22 perennials + 34 bulbs total.
+
+  - name: Driveway top bed
+    approx_sqft: 70                     # 14 ft × 5 ft
+    sun: full sun
+    exposure: |
+      Linear bed at the top of the driveway. Open mountainside with no
+      overhead shade. Drip irrigation possible (run a hose loop along the
+      back) — used as backup during drought, not life support. Plants
+      still skewed drought-tolerant as the dominant strategy.
+    notes: |
+      Bloom calendar: Mar-May Daffodils + Dianthus → May-Jul Lavender +
+      Salvia + Allium → Jun-Aug Veronica + Liatris + Echinacea + Coreopsis
+      + Geranium → Jul-Oct Rudbeckia + Liatris → Aug-Sep Liriope spikes →
+      Sep-Oct Sedum + Heuchera burgundy → winter Spiraea structure +
+      Sedum dried heads + Liriope evergreen + Heuchera + Lavender semi-
+      evergreen. Year-round.
+      See plan_layouts/top_layout.png for top-down spatial diagram.
+
+    plants:
+      # Back row (toward house, 2-3 ft tall)
+      - name: Spiraea japonica 'Goldmound'
+        common_name: Spiraea
+        quantity: 1
+        source: Diller
+        role: Back-center anchor; gold foliage + pink Jul flowers
+
+      - name: Lavandula angustifolia 'Phenomenal'
+        common_name: Phenomenal Lavender
+        quantity: 3
+        source: Diller
+        role: Back-row drift; heat-tolerant cultivar, purple Jun-Jul
+
+      - name: Veronica spicata 'Royal Candles'
+        common_name: Spike Speedwell
+        quantity: 3
+        source: Diller
+        role: Back-row vertical accents; blue spikes Jun-Aug
+
+      # Mid row (~2 ft tall, summer flower mass)
+      - name: Echinacea purpurea 'Cheyenne Spirit'
+        common_name: Coneflower (mixed colors)
+        quantity: 5
+        source: Diller
+        role: Mid-row mass; PA native, multicolor blooms Jun-Sep
+
+      - name: Liatris spicata 'Kobold'
+        common_name: Blazing Star
+        quantity: 5
+        source: Diller
+        role: Vertical purple spikes Jul-Aug; PA native, pollinator magnet
+
+      - name: Salvia x sylvestris 'May Night'
+        common_name: May Night Salvia
+        quantity: 3
+        source: Diller
+        role: Deep purple May-Jun + rebloom Aug; deer-resistant
+
+      # Mid-front (1-1.5 ft tall, golden / sedum band)
+      - name: Coreopsis verticillata 'Moonbeam'
+        common_name: Threadleaf Coreopsis
+        quantity: 5
+        source: Diller
+        role: Yellow Jun-Sep; ferny foliage; drought-tolerant
+
+      - name: Rudbeckia fulgida 'Goldsturm'
+        common_name: Black-Eyed Susan
+        quantity: 5
+        source: Diller
+        role: Golden Jul-Oct; PA native; long bloom
+
+      - name: Sedum 'Autumn Joy'
+        common_name: Autumn Stonecrop
+        quantity: 5
+        source: Diller
+        role: Mid-front clusters; pink Sep + winter dried heads
+
+      - name: Geranium 'Rozanne'
+        common_name: Cranesbill
+        quantity: 3
+        source: Diller
+        role: Long-blooming purple May-Oct; sprawling 2 ft spread
+
+      # Front edge (6 in - 1.5 ft)
+      - name: Dianthus 'Firewitch'
+        common_name: Cheddar Pinks
+        quantity: 3
+        source: Diller
+        role: Front edge mat; pink Apr-May, blue-grey foliage year-round
+
+      - name: Heuchera 'Palace Purple'
+        common_name: Coral Bells (burgundy)
+        quantity: 3
+        source: Diller
+        role: Burgundy foliage all season
+
+      - name: Liriope muscari
+        common_name: Lily Turf
+        quantity: 5
+        source: Diller
+        role: Front-edge clumps; evergreen strap foliage + Aug-Sep purple spikes
+        notes: Confirm with Diller this is L. muscari (clumping) NOT L. spicata (spreading invasive)
+
+      # Bulbs (fall plant for next spring)
+      - name: Narcissus mixed (early/mid/late season)
+        common_name: Daffodils
+        quantity: 30
+        source: Find elsewhere    # mail-order bulb supplier
+        role: Mar-May progression of spring color; deer-proof; interplant throughout
+        timing: plant fall 2026
+
+      - name: Allium 'Purple Sensation'
+        common_name: Ornamental Onion
+        quantity: 12
+        source: Find elsewhere
+        role: 2 ft purple drumsticks May-Jun; interplant in mid-row pockets
+        timing: plant fall 2026
+
+    # Total: 49 perennials + 42 bulbs. Designed at maximalist density to be
+    # trimmed as plants establish over 2-3 seasons.
