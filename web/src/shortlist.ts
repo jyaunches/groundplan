@@ -17,6 +17,7 @@ const DEFAULT_SHORTLIST: number[] = [
 // other picks they've made.
 const MIGRATIONS: Array<{ id: string; addIds: number[] }> = [
   { id: '2026-04-24-add-dicentra', addIds: [123] },
+  { id: '2026-04-25-add-honeylocust-skyline', addIds: [149] },
 ]
 
 function readApplied(): Set<string> {

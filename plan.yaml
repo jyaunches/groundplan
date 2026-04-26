@@ -141,3 +141,45 @@ areas:
     #   - Drop one of the Heucheras (role covered by hostas + pulmonaria)
     #   - Pulmonaria 3 → 2
     #   - Tiarella 5 → 4 (they spread, gaps fill naturally)
+
+  - name: Driveway shade
+    sun: full sun
+    exposure: |
+      Open driveway alongside / edge planting. Goal is to shade the driveway
+      surface to keep asphalt cooler and the area more comfortable.
+      Mountainside wind exposure (deep tap roots required so the tree anchors
+      well; no surface-rooted species near the driveway pavement).
+    notes: |
+      Two-tree staggered approach being considered:
+        1. Plant the 2-2.5" cal Honeylocust 'Skyline' from Diller THIS WEEK
+           (late April 2026 — tail end of spring B&B window, but Honeylocust
+           leafs out late so it's still effectively dormant; planting now is
+           viable with aggressive watering through summer).
+        2. Optionally pair with a 4-5" cal Honeylocust from a central-PA
+           landscape contractor (Black Landscape Center, Stauffer's of Kissel
+           Hill, or via Bartlett/Davey wholesale) installed in FALL 2026 —
+           the optimal window for large B&B. Budget ~$2500-3500 installed.
+      This area's full plant list is still being designed — committed now
+      so the Honeylocust acquisition isn't held up.
+
+    plants:
+      - name: Gleditsia triacanthos inermis 'Skyline'
+        common_name: Honeylocust (thornless)
+        quantity: 1
+        source: Diller
+        target_size: 2-2.5" caliper (~10-11 ft tall, $194)
+        role: |
+          Primary driveway shade tree. Rapid grower, deep tap root (won't
+          buckle pavement), tiny pinnate leaflets that don't need raking,
+          high wind tolerance for the mountainside, filtered dappled shade.
+          Plant 15-20 ft off driveway edge. Stake (mountainside wind),
+          mulch ring, soaker hose for first season.
+        status: planning to acquire late April 2026
+
+      # TODO — fall 2026 contractor specimen:
+      # - name: Gleditsia triacanthos inermis 'Skyline' (4-5" cal specimen)
+      #   quantity: 1
+      #   source: Black Landscape Center / contractor (B&B from regional wholesaler)
+      #   target_size: 4-5" caliper (~17-20 ft tall, ~$2500-3500 installed)
+      #   role: Pair with Diller-sized tree for shade-now + shade-later staggering.
+      #   timing: install Sept-Nov 2026 (optimal large-B&B window)
