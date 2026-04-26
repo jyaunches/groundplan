@@ -93,16 +93,20 @@ CREATE INDEX IF NOT EXISTS idx_species_lookup ON species(genus, species, cultiva
 
 -- ============================================================
 -- areas: landscaping areas on the property.
+-- Synced from plan.yaml by sync_plan.py.
 -- ============================================================
 CREATE TABLE IF NOT EXISTS areas (
     id              INTEGER PRIMARY KEY,
     name            TEXT NOT NULL UNIQUE,    -- e.g. "Front foundation bed"
+    slug            TEXT UNIQUE,             -- stable machine ID; matches areas_originals/<slug>/ photo dir
     sun_exposure    TEXT,
     soil_notes      TEXT,
     approx_sqft     REAL,
     theme           TEXT,                    -- "privacy screen", "ornamental", "foundation"
     notes           TEXT
 );
+
+CREATE INDEX IF NOT EXISTS idx_areas_slug ON areas(slug);
 
 -- ============================================================
 -- plan_items: the actual planting plan.
