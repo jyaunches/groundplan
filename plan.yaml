@@ -17,41 +17,52 @@ areas:
   - name: Front foundation corner
     slug: sp1_shade_front_door
     approx_sqft: 64                   # ~8x8 ft, possibly slightly larger
-    sun: full shade                   # bright open shade — no direct sun, but bright reflected light
+    sun: part shade                   # mostly shaded; afternoon direct sun ~3pm onwards in summer; small fully-shaded pocket in the corner
     exposure: |
       North-facing front-of-house corner. Sheltered by the house from the
       mountain wind (low wind exposure regardless of plant ratings).
-      Bright afternoon sun passes by but never lands directly. High indirect
-      light all day — ideal "bright open shade" conditions.
+      Mostly shaded, but in summer the bed gets direct afternoon sun from
+      ~3pm onwards (roughly 3–5 hours). A small pocket tucked into the
+      corner stays in full shade all day.
     deer_pressure: minimal             # right by front door; deer haven't been observed here
-    theme: layered shade with year-round interest
+    theme: simplified part-shade palette — culled after AI rendering review
     notes: |
-      Visible from front door year-round, so winter interest matters.
-      Bloom calendar: Hellebores Feb–Apr, Pulmonaria/Tiarella/Dicentra
-      Mar–May, Astilbe + Hosta Jun–Jul, Hydrangea + Hosta Jul–Aug,
-      Bugbane + Mahonia + Hakonechloa fall color Aug–Oct, Mahonia
-      yellow blooms Feb. Something visible every month.
+      Plant list culled 2026-04-26 after AI-rendering review: kept Mahonia
+      'Winter Sun', Helleborus 'Ivory Prince', Astilbe 'Deutschland',
+      Pulmonaria 'Mrs. Moon', Galium odoratum. Removed the rest
+      (Cephalotaxus, Dicentra, both Hostas, both Heucheras, Hakonechloa,
+      Actaea, Tricyrtis, Tiarella). Hydrangea 'Annabelle' later swapped
+      for Clethra 'Ruby Spice' (PA native, fragrant, pink). Front-edge
+      border: Liriope muscari (clumping form — chosen over invasive-
+      flagged L. spicata and over messier-looking native Carex
+      pensylvanica). Then added Geum 'Totally Tangerine' (orange,
+      May–Aug) and Anemone × hybrida 'Honorine Jobert' (white coneflower
+      silhouette, Aug–Oct) to fill bloom gaps and extend season. Added
+      Brunnera 'Jack Frost' for true-blue spring flowers + silver foliage
+      (chosen over a blue hydrangea, which would have scorched in the
+      afternoon sun).
 
     plants:
-      # Anchors (back of corner)
-      - name: Cephalotaxus harringtonia 'Duke Garden'
-        common_name: Japanese Plum Yew
-        quantity: 1
-        source: Diller
-        role: Evergreen needled anchor shrub, ~7.5 ft mature, deer-resistant, wind-rated high
-
+      # Anchor — back of corner
       - name: Mahonia x media 'Winter Sun'
         common_name: Mahonia
         quantity: 1
         source: Diller
-        role: Second anchor — evergreen holly-like leaves with bright yellow Feb–Mar blooms
+        role: Anchor — evergreen holly-like leaves with bright yellow Feb–Mar blooms
 
-      # Mid-layer flowering shrub
-      - name: Hydrangea arborescens 'Annabelle'
-        common_name: Smooth Hydrangea
+      # Mid-layer flowering shrub — PA native, fragrant
+      - name: Clethra alnifolia 'Ruby Spice'
+        common_name: Summersweet
         quantity: 1
         source: Diller
-        role: White snowball blooms June–September, shade-tolerant, ~4 ft, blooms on new wood
+        role: PA native fragrant shrub, ~5 ft mature (occasionally larger), pink bottlebrush blooms July–August, tolerates part shade. Replaces Hydrangea 'Annabelle' — chose Clethra for fragrance by front door, native status, and to bring pink into the white-heavy palette.
+
+      # Coneflower-silhouette / fall extender
+      - name: Anemone x hybrida 'Honorine Jobert'
+        common_name: Japanese Anemone
+        quantity: 2
+        source: Find elsewhere    # mail-order (Bluestone, Plant Delights) — not in Diller catalog
+        role: White daisy-form blooms with prominent yellow centers, ~3 ft airy stems, blooms late August through October — extends bed bloom calendar by ~6 weeks past everything else. Part shade, well-behaved clumping perennial. Provides the coneflower silhouette in fall when true Echinacea is done.
 
       # Mid-layer evergreen perennial
       - name: Helleborus orientalis 'Ivory Prince'
@@ -60,45 +71,12 @@ areas:
         source: Diller
         role: Evergreen perennial, late winter / early spring blooms, deer-resistant
 
-      # Spring ephemeral
-      - name: Dicentra spectabilis
-        common_name: Old-Fashioned Bleeding Heart
-        quantity: 1
-        source: Diller
-        role: Pink heart-shaped spring blooms, dies back midsummer
-
       # Early-summer plumes
       - name: Astilbe 'Deutschland'
         common_name: Astilbe (white)
         quantity: 3
         source: Diller
         role: Feathery white plumes June–July, ferny foliage all season
-
-      # Bold foliage statement
-      - name: Hosta 'Sum and Substance'
-        common_name: Giant Chartreuse Hosta
-        quantity: 1
-        source: Find elsewhere    # Bluestone Perennials, local nursery
-        role: Statement large hosta, ~4 ft wide chartreuse foliage; deer-vulnerable but unlikely here
-
-      - name: Hosta 'Patriot'
-        common_name: Variegated Hosta
-        quantity: 2
-        source: Find elsewhere
-        role: Mid-size variegated white-edge, brightens corner
-
-      # Foliage palette (orange/burgundy via Heuchera)
-      - name: Heuchera 'Caramel'
-        common_name: Coral Bells (caramel)
-        quantity: 1
-        source: Diller
-        role: Caramel-orange foliage; deer-resistant alternative palette
-
-      - name: Heuchera 'Palace Purple'
-        common_name: Coral Bells (burgundy)
-        quantity: 1
-        source: Diller
-        role: Burgundy foliage all season
 
       # Silver foliage / spring color
       - name: Pulmonaria 'Mrs. Moon'
@@ -107,46 +85,41 @@ areas:
         source: Find elsewhere    # Bluestone Perennials
         role: Silver-spotted leaves all season, pink-to-blue spring blooms
 
-      # Fall grass
-      - name: Hakonechloa macra 'Aureola'
-        common_name: Japanese Forest Grass
+      # Blue spring color + silver foliage
+      - name: Brunnera macrophylla 'Jack Frost'
+        common_name: Siberian Bugloss / False Forget-Me-Not
         quantity: 3
-        source: Diller
-        role: Chartreuse arching grass; pink-copper fall color; needs bright indirect light to keep color
+        source: Find elsewhere    # mail-order (Bluestone, Plant Delights) — not in Diller catalog
+        role: True sky-blue forget-me-not flowers April–May; silver-veined heart-shaped leaves all season. Brings blue into the bed (replaces the role a blue hydrangea would have played, but actually thrives in afternoon-sun part-shade). Pairs texturally with Pulmonaria — both silver-foliage but different leaf shapes.
 
-      # Late-summer vertical accent
-      - name: Actaea racemosa
-        common_name: Black Cohosh / Bugbane
-        quantity: 1
-        source: Find elsewhere    # PA native nursery (Bowman's Hill) or Bluestone
-        role: PA native, 4–6 ft white spires August–September
-
-      # Sept-Oct bloom
-      - name: Tricyrtis hirta
-        common_name: Toad Lily
-        quantity: 2
-        source: Find elsewhere
-        role: Orchid-like spotted purple blooms September–October
-
-      # Native ground cover
-      - name: Tiarella cordifolia
-        common_name: Foamflower
-        quantity: 5
-        source: Find elsewhere    # PA native nursery (Bowman's Hill) preferred
-        role: PA native, white foamy spring spikes, red-bronze fall foliage, slowly spreading
+      # Orange — long-blooming May-Aug
+      - name: Geum 'Totally Tangerine'
+        common_name: Avens
+        quantity: 3
+        source: Find elsewhere    # mail-order (Bluestone, Plant Delights) — not in Diller catalog
+        role: Apricot-orange wiry-stemmed flowers May through August (~3 month bloom — sterile hybrid keeps pushing new spikes), 2 ft tall over scalloped basal foliage. Part shade tolerant. Fills the May–June bloom gap; brings orange into the palette. Mid-layer just behind the Liriope.
 
       # Fragrant ground cover
       - name: Galium odoratum
         common_name: Sweet Woodruff
         quantity: 3
         source: Diller
-        role: Full-shade ground cover; fragrant white May flowers; complements Tiarella texturally
+        role: Full-shade ground cover; fragrant white May flowers
 
-    # Total: 32 plants in 64 sqft. Maximalist density — trim as plants establish.
-    # Trim-first candidates if too dense after season 1:
-    #   - Drop one of the Heucheras (role covered by hostas + pulmonaria)
-    #   - Pulmonaria 3 → 2
-    #   - Tiarella 5 → 4 (they spread, gaps fill naturally)
+      # Front-edge clumping border
+      - name: Liriope muscari
+        common_name: Lilyturf
+        quantity: 10
+        source: Find elsewhere    # not in Diller catalog — local nursery or mail-order (Bluestone, Wayside)
+        role: |
+          Front-edge border; clean upright grass-like blades, lilac flower
+          spikes Aug–Sep, handles afternoon sun + shaded pocket equally,
+          deer-resistant. Clumping habit (vs. spicata's running) — stays
+          put, won't escape to woods. Not on PA invasive lists. ~10 plants
+          at ~12" spacing along the front curving edge.
+
+    # Total: 32 plants in 64 sqft (10 species). Comfortable density for the
+    # part-shade conditions; bloom calendar now covers Feb through October.
 
   - name: Driveway shade
     slug: driveway_shade_tree         # single-tree placement — no photo dir
@@ -514,6 +487,82 @@ areas:
   #   Heuchera 'Palace Purple' ×3    → swapped to Heuchera 'Caramel'
   #   Echinacea 'Cheyenne Spirit' ×5 → split to Echinacea 'Pow Wow White' (×5) + Echinacea 'Sundown' (×3)
   #   Allium 'Purple Sensation'      → swapped to Allium 'Mount Everest' (white)
+
+  - name: Driveway top backdrop tree
+    slug: driveway_top_magnolia       # single-tree placement — no photo dir
+    sun: full sun
+    exposure: |
+      Behind / above the linear sp5 driveway-top bed. Mountainside, open
+      to fall wind (summer is calm at this site — wind hits in autumn).
+      Site against the house wall or in the lee of natural windbreak if
+      possible — magnolia wood is moderately brittle and large flowers
+      can shred in sustained wind.
+    deer_pressure: low                 # magnolias rated deer-resistant
+    theme: late-blooming flowering tree, frost-safe for mountainside
+    notes: |
+      Backdrop tree for the sp5 driveway-top palette (lavender / blue /
+      apricot / yellow / white). Reddish-purple tulip-shaped flowers
+      late April–early May — hands off to the sp5 perennials as they
+      come on. Mature ~12 ft × 10 ft; place 8–12 ft behind the bed
+      with sufficient root run.
+
+      Why 'Jane' over 'Royal Star': bred at the US National Arboretum
+      (1955, "Little Girl" series) specifically for late bloom to avoid
+      the late-frost wipeouts that hit Royal Star and other early-
+      blooming magnolias on cold-pocket sites like ours. Blooms 2–3
+      weeks later than Royal Star, comfortably past most last-frost
+      dates for central PA mountainside.
+
+    pre_purchase_checklist: |
+      Before buying — call Diller and confirm THREE things about the
+      'Jane' specimen they have in stock. The answers determine whether
+      we plant spring 2026 or wait until spring 2027:
+
+        1. Container or B&B (balled-and-burlapped)?
+           - Container-grown: more flexible — plantable spring through
+             early summer with diligent watering.
+           - B&B: best planted while dormant or just-budding. Once
+             fully leafed out, transplant success drops sharply.
+
+        2. Current growth stage?
+           - Dormant / just-budding: ✅ plant now (within 2 weeks).
+           - Just-leafing (small tender leaves emerging): marginal —
+             plant within 1–2 weeks, water aggressively all summer.
+           - Fully leafed out: 🛑 wait until spring 2027 — losing one
+             season barely affects long-term sequencing for a slow
+             grower like 'Jane'.
+
+        3. Will they hold the specimen for 1–2 weeks while site is
+           prepped (staking, mulch, hole dug)?
+
+      Planting timing rationale: SPRING planting (not fall) for this
+      site because our wind hits in autumn, not summer. A spring-
+      planted tree gets a calm summer to establish roots before facing
+      the first fall windy season with at least one growing season's
+      anchoring already in place.
+
+    plants:
+      - name: Magnolia liliiflora 'Jane'
+        common_name: Jane Magnolia (Little Girl series)
+        quantity: 1
+        source: Diller
+        target_size: 5–6 ft, $143 (catalog id 312)
+        role: |
+          Late-blooming compact magnolia, ~10–15 ft × 8–12 ft mature.
+          Reddish-purple tulip-shaped flowers with near-white interior,
+          April–May. Sometimes reblooms lightly in midsummer. Late
+          leaf-out (flowers open before leaves — uninterrupted bloom
+          show). Hardy zone 4–8, tolerates full sun, slow grower at
+          6–12"/yr.
+        establishment_care: |
+          Stake aggressively for 2–3 years (3 stakes spaced around
+          trunk, flexible ties — allow some sway). Mulch ring 3" deep,
+          3 ft diameter, kept off the trunk. Deep weekly watering
+          through summer years 1 and 2. No fertilizer year 1 — let
+          roots establish. Heavy fall mulch year 1 to insulate against
+          freeze-thaw. Don't prune in fall (stimulates non-hardened
+          growth). First reliable bloom usually year 2 or 3.
+        status: pending Diller stock check (2026-04-26) — see pre_purchase_checklist
 
   # ============================================================
   # STUBS — areas photographed but not yet planned.
