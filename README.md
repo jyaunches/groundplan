@@ -17,7 +17,7 @@ A SQLite-backed catalog and planting plan for a central-PA mountainside property
 
 ### 1. Raw source: the Diller Nursery 2026 catalog
 
-- Physical catalog photographed as HEIC images → `new pictures/IMG_9312.HEIC` … `IMG_9327.HEIC`.
+- Physical catalog photographed as HEIC images → `Diller Catalogue/IMG_9312.HEIC` … `IMG_9327.HEIC`.
 - Plus a PDF of the Azaleas section: `Diller Nursery 2026 Catalog Azaleas.pdf`.
 
 ### 2. OCR — macOS Vision framework
@@ -149,7 +149,7 @@ Known PNHP calls that surprise the garden-center definition: `Thuja occidentalis
 
 ```bash
 # OCR one image
-swift ocr.swift "new pictures/IMG_9315.HEIC" > ocr_new/IMG_9315.tsv
+swift ocr.swift "Diller Catalogue/IMG_9315.HEIC" > ocr_new/IMG_9315.tsv
 
 # Parse all OCR TSVs to catalog_items CSV
 python3 parse_catalog.py > catalog_items.csv

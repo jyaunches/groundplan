@@ -2,7 +2,7 @@
 __pycache__/
 *.pyc
 
-# Intermediate parser outputs (regenerable from new pictures/)
+# Intermediate parser outputs (regenerable from Diller Catalogue/)
 catalog.csv
 parse.err
 ocr/
