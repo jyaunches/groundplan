@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 const STORAGE_KEY = 'landscaping_plan_shortlist_v1'
 const MIGRATIONS_KEY = 'landscaping_plan_shortlist_migrations'
+const API_URL = '/api/shortlist'
 
-// Initial-seed values applied only on first load (when localStorage is empty).
-// Lets the app ship with a pre-populated example so the feature is visible
-// without the user having to click anything first.
+// Initial-seed values applied only when both server file and localStorage are
+// empty (true first-run). Lets the app ship with a pre-populated example.
 const DEFAULT_SHORTLIST: number[] = [
   107, // CORNUS mas — Corneliancherry Dogwood
   123, // DICENTRA spectabilis — Old-Fashioned Bleeding Heart
@@ -35,47 +35,104 @@ function writeApplied(applied: Set<string>) {
   try { localStorage.setItem(MIGRATIONS_KEY, JSON.stringify([...applied])) } catch {}
 }
 
-function load(): Set<number> {
+function loadLocal(): Set<number> {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
-    let ids: Set<number>
-    if (raw === null) {
-      // First-run seed.
-      ids = new Set(DEFAULT_SHORTLIST)
-    } else {
-      const parsed = JSON.parse(raw)
-      ids = Array.isArray(parsed)
-        ? new Set(parsed.filter(n => typeof n === 'number'))
-        : new Set()
-    }
-    // Apply pending migrations.
-    const applied = readApplied()
-    let changed = raw === null
-    for (const m of MIGRATIONS) {
-      if (applied.has(m.id)) continue
-      for (const id of m.addIds) if (!ids.has(id)) { ids.add(id); changed = true }
-      applied.add(m.id)
-    }
-    if (changed) localStorage.setItem(STORAGE_KEY, JSON.stringify([...ids]))
-    writeApplied(applied)
-    return ids
+    if (!raw) return new Set()
+    const parsed = JSON.parse(raw)
+    return Array.isArray(parsed)
+      ? new Set(parsed.filter(n => typeof n === 'number'))
+      : new Set()
   } catch {
     return new Set()
   }
 }
 
-function save(ids: Set<number>) {
+function saveLocal(ids: Set<number>) {
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...ids])) } catch {}
+}
+
+async function fetchServer(): Promise<Set<number> | null> {
   try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify([...ids]))
+    const res = await fetch(API_URL)
+    if (!res.ok) return null
+    const parsed = await res.json()
+    if (!Array.isArray(parsed)) return null
+    return new Set(parsed.filter((n): n is number => typeof n === 'number'))
   } catch {
-    // localStorage may be full or disabled; silently ignore — UI still works for the session.
+    return null
   }
 }
 
-export function useShortlist() {
-  const [ids, setIds] = useState<Set<number>>(() => load())
+async function postServer(ids: Set<number>) {
+  try {
+    await fetch(API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify([...ids]),
+    })
+  } catch {
+    // Server unavailable (e.g. production build) — localStorage still has it.
+  }
+}
 
-  useEffect(() => { save(ids) }, [ids])
+// Apply pending migrations + return whether any change was made.
+function applyMigrations(ids: Set<number>): boolean {
+  const applied = readApplied()
+  let changed = false
+  for (const m of MIGRATIONS) {
+    if (applied.has(m.id)) continue
+    for (const id of m.addIds) if (!ids.has(id)) { ids.add(id); changed = true }
+    applied.add(m.id)
+  }
+  writeApplied(applied)
+  return changed
+}
+
+export function useShortlist() {
+  const [ids, setIds] = useState<Set<number>>(() => loadLocal())
+  const hydrated = useRef(false)
+
+  // Hydrate from server on mount. Server file is source of truth when present;
+  // if absent or empty, bootstrap it from localStorage (or the default seed).
+  useEffect(() => {
+    let cancelled = false
+    fetchServer().then(server => {
+      if (cancelled) return
+      const local = loadLocal()
+      let truth: Set<number>
+      let pushToServer = false
+
+      if (server === null) {
+        // No server (production build / network error). Stay local-only.
+        truth = local.size > 0 ? local : new Set(DEFAULT_SHORTLIST)
+      } else if (server.size > 0) {
+        truth = server
+      } else if (local.size > 0) {
+        // Server file exists but is empty — bootstrap from browser state.
+        truth = local
+        pushToServer = true
+      } else {
+        truth = new Set(DEFAULT_SHORTLIST)
+        pushToServer = true
+      }
+
+      const migrationsChanged = applyMigrations(truth)
+      saveLocal(truth)
+      if (server !== null && (pushToServer || migrationsChanged)) postServer(truth)
+
+      hydrated.current = true
+      setIds(truth)
+    })
+    return () => { cancelled = true }
+  }, [])
+
+  // Persist on change. Skip server POST until hydration finishes so we don't
+  // overwrite a freshly-fetched server state with stale local IDs.
+  useEffect(() => {
+    saveLocal(ids)
+    if (hydrated.current) postServer(ids)
+  }, [ids])
 
   const toggle = (id: number) => {
     setIds(prev => {
