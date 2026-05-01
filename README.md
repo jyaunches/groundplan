@@ -1,17 +1,18 @@
 # landscaping_plan
 
-A SQLite-backed catalog and planting plan for a central-PA mountainside property, assembled from a printed nursery catalog plus third-party botanical data.
+A catalog of nursery offerings plus a hand-edited planting plan for a central-PA mountainside property.
 
-`landscaping.db` is the single source of truth. Schema lives in `schema.sql`. Everything else in this repo is a pipeline stage that wrote into it.
+Two sources of truth, one each for catalog data and for the plan:
 
-## Tables
+- **`landscaping.db`** — reference data only. Catalog offerings + species metadata. Schema in `schema.sql`.
+- **`plan.yaml`** — the planting plan. Edited directly; read by the web app via vite middleware.
+
+## Tables (in `landscaping.db`)
 
 | Table | What it holds | Populated by |
 |---|---|---|
 | `catalog_items` | One row per priced offering from the nursery catalog (cultivar × size × container × form → price). | `ocr.swift` → `parse_catalog.py` |
 | `species` | One row per distinct (genus, species, cultivar). Research-augmented metadata lives here: zone, sun, mature size, deer/wind/drought resistance, bloom, image, etc. | `find_images.py`, `research_species.py`, manual cleanup |
-| `areas` | Landscaping areas on the property. | Manual / app |
-| `plan_items` | The actual planting plan — links an area to a catalog offering. | Manual / app |
 
 ## Data pipeline
 

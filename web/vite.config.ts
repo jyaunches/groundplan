@@ -1,11 +1,14 @@
 import { defineConfig, type PluginOption } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
-import { readFile, writeFile } from 'node:fs/promises'
+import { readFile, writeFile, mkdir } from 'node:fs/promises'
 import { existsSync } from 'node:fs'
 import path from 'node:path'
+import yaml from 'js-yaml'
 
 const SHORTLIST_PATH = path.resolve(import.meta.dirname, '..', 'shortlist.json')
+const PLAN_PATH = path.resolve(import.meta.dirname, '..', 'plan.yaml')
+const PLAN_OUT = path.resolve(import.meta.dirname, 'public', 'plan.json')
 
 function shortlistApi(): PluginOption {
   return {
@@ -46,6 +49,37 @@ function shortlistApi(): PluginOption {
   }
 }
 
+function planApi(): PluginOption {
+  return {
+    name: 'plan-api',
+    configureServer(server) {
+      server.middlewares.use('/api/plan', async (_req, res) => {
+        try {
+          const raw = await readFile(PLAN_PATH, 'utf-8')
+          const parsed = yaml.load(raw)
+          res.setHeader('Content-Type', 'application/json')
+          res.end(JSON.stringify(parsed))
+        } catch (err) {
+          res.statusCode = 500
+          res.end(String(err))
+        }
+      })
+      server.watcher.add(PLAN_PATH)
+      server.watcher.on('change', file => {
+        if (file === PLAN_PATH) server.ws.send({ type: 'full-reload' })
+      })
+    },
+    async buildStart() {
+      // Bake plan.yaml -> public/plan.json so production builds have a static asset
+      // at /plan.json. Dev hits /api/plan instead and never reads this file.
+      const raw = await readFile(PLAN_PATH, 'utf-8')
+      const parsed = yaml.load(raw)
+      await mkdir(path.dirname(PLAN_OUT), { recursive: true })
+      await writeFile(PLAN_OUT, JSON.stringify(parsed), 'utf-8')
+    },
+  }
+}
+
 export default defineConfig({
-  plugins: [react(), tailwindcss(), shortlistApi()],
+  plugins: [react(), tailwindcss(), shortlistApi(), planApi()],
 })

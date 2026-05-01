@@ -91,54 +91,7 @@ CREATE TABLE IF NOT EXISTS species (
 
 CREATE INDEX IF NOT EXISTS idx_species_lookup ON species(genus, species, cultivar);
 
--- ============================================================
--- areas: landscaping areas on the property.
--- Synced from plan.yaml by sync_plan.py.
--- ============================================================
-CREATE TABLE IF NOT EXISTS areas (
-    id              INTEGER PRIMARY KEY,
-    name            TEXT NOT NULL UNIQUE,    -- e.g. "Front foundation bed"
-    slug            TEXT UNIQUE,             -- stable machine ID; matches areas_originals/<slug>/ photo dir
-    sun_exposure    TEXT,
-    soil_notes      TEXT,
-    approx_sqft     REAL,
-    theme           TEXT,                    -- "privacy screen", "ornamental", "foundation"
-    notes           TEXT
-);
-
-CREATE INDEX IF NOT EXISTS idx_areas_slug ON areas(slug);
-
--- ============================================================
--- plan_items: the actual planting plan.
--- Links an area to a specific catalog purchase (which size/container).
--- ============================================================
-CREATE TABLE IF NOT EXISTS plan_items (
-    id              INTEGER PRIMARY KEY,
-    area_id         INTEGER NOT NULL REFERENCES areas(id) ON DELETE CASCADE,
-    species_id      INTEGER REFERENCES species(id),
-    catalog_item_id INTEGER REFERENCES catalog_items(id),
-    quantity        INTEGER NOT NULL DEFAULT 1,
-    notes           TEXT
-);
-
--- ============================================================
--- Convenience views
--- ============================================================
-
--- Plan rollup with per-line subtotal and area totals.
-CREATE VIEW IF NOT EXISTS v_plan_costs AS
-SELECT
-    a.name                                     AS area,
-    s.common_name                              AS plant,
-    s.cultivar,
-    ci.size,
-    ci.container,
-    ci.price,
-    pi.quantity,
-    ROUND(ci.price * pi.quantity, 2)           AS subtotal,
-    pi.notes
-FROM plan_items pi
-JOIN areas         a  ON a.id  = pi.area_id
-LEFT JOIN species  s  ON s.id  = pi.species_id
-LEFT JOIN catalog_items ci ON ci.id = pi.catalog_item_id
-ORDER BY a.name, s.common_name;
+-- The planting plan itself lives in plan.yaml at the project root, not in
+-- this database. SQLite holds reference data (catalog_items + species) that
+-- the plan refers to by name; the plan is read directly from YAML by the
+-- web app and by Claude Code edits.
