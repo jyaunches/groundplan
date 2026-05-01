@@ -4,6 +4,7 @@ import { estimateYearsTo20Ft, formatOfferingSize } from '../growth'
 type CardProps = {
   s: Species
   shortlisted: boolean
+  showPlantType: boolean
   onToggleShortlist: (id: number) => void
 }
 
@@ -53,7 +54,7 @@ const RATE_TOOLTIP: Record<string, string> = {
   fast: 'Fast = 24–36 in/yr (juvenile phase)',
 }
 
-export function SpeciesCard({ s, shortlisted, onToggleShortlist }: CardProps) {
+export function SpeciesCard({ s, shortlisted, showPlantType, onToggleShortlist }: CardProps) {
   const sci = [s.genus, s.species].filter(Boolean).join(' ').toLowerCase()
   const sciDisplay = sci.charAt(0).toUpperCase() + sci.slice(1)
   const zone = s.hardiness_zone_min && s.hardiness_zone_max
@@ -94,7 +95,14 @@ export function SpeciesCard({ s, shortlisted, onToggleShortlist }: CardProps) {
                 <span className="ml-1 text-stone-600">‘{s.cultivar}’</span>
               )}
             </h3>
-            <p className="truncate text-sm italic text-stone-500">{sciDisplay}</p>
+            <p className="truncate text-sm italic text-stone-500">
+              {sciDisplay}
+              {showPlantType && s.plant_types.length > 0 && (
+                <span className="ml-2 not-italic text-xs font-semibold uppercase tracking-wide text-sky-700">
+                  · {s.plant_types.join(' / ')}
+                </span>
+              )}
+            </p>
           </div>
           <div className="flex items-start gap-2">
             <div className="text-right">
@@ -124,7 +132,6 @@ export function SpeciesCard({ s, shortlisted, onToggleShortlist }: CardProps) {
         </div>
 
         <div className="mt-1.5 flex flex-wrap gap-1">
-          {s.plant_types.map(t => <Badge key={t} tone="sky">{t}</Badge>)}
           {s.native_to_pa === 1 && <Badge tone="emerald">PA native</Badge>}
           {s.evergreen === 1 && <Badge tone="emerald">Evergreen</Badge>}
           {s.deer_resistance === 'high' && <Badge tone="amber">Deer resistant</Badge>}

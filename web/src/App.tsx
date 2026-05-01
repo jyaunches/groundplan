@@ -134,6 +134,7 @@ export default function App() {
                   key={s.id}
                   s={s}
                   shortlisted={shortlist.has(s.id)}
+                  showPlantType={filters.plant_types.size === 0}
                   onToggleShortlist={shortlist.toggle}
                 />
               ))}
