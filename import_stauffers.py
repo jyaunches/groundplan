@@ -115,6 +115,51 @@ ROWS = [
     ("RHODODENDRON", None, "Purple Passion", "Purple Passion Rhododendron",
      None, None, None, 69.99,
      "779e0d83-34dc-4d53-8f24-b6c6e9eeb37c.JPG", None),
+
+    # Second pass — identified by hand from sign/tag re-reads. Cultivar
+    # guesses for the Clematis are inferred from flower form + color
+    # (tag text wasn't readable); confirm on next visit.
+    ("SYRINGA", "reticulata", "Ivory Silk", "Ivory Silk Japanese Tree Lilac",
+     None, None, None, 245.99,
+     "5f909354-36fc-4b85-b867-0e4ab61e0fbf.JPG", None),
+    ("THUJA", "occidentalis", "Emerald Gold", "Emerald Gold Arborvitae",
+     None, None, "B&B", None,
+     "a0651ef7-59b3-429d-af84-5861f6926b42.JPG",
+     "tag had 'emerald' visible, gold-tipped foliage — best guess 'Emerald Gold'/'Janed Gold'; price not captured"),
+    ("CLEMATIS", None, "Diana's Delight", "Diana's Delight Clematis",
+     None, None, None, 34.00,
+     "IMG_9431.jpeg", "price tag partially visible (~$34)"),
+    ("CLEMATIS", None, "Niobe", "Niobe Clematis",
+     None, None, None, 44.99,
+     "IMG_9432.jpeg",
+     "best guess from deep ruby-red flower form — tag text not readable"),
+    ("CLEMATIS", None, "Henryi", "Henryi Clematis",
+     None, None, None, None,
+     "IMG_9433.jpeg",
+     "best guess from large white flat flowers — tag text not readable; price not captured"),
+
+    # Third pass — perennials with confident plant ID but partial / missing
+    # prices. Imported for traceability; price=NULL rows won't surface in
+    # the web catalog until updated.
+    ("AQUILEGIA", None, "Kirigami Red & White", "Kirigami Red & White Columbine",
+     None, "#1", None, 24.99,
+     "dbb6477b-4e3c-4e91-8009-b24288d59311.JPG",
+     "price partially visible (~$24.99) — confirm"),
+    ("AMSONIA", None, "Starstruck", "Starstruck Blue Star",
+     None, "#1", None, None,
+     "2c4da6f9-ea1b-435c-b08b-bdff8f259380.JPG", "price not captured"),
+    ("DICENTRA", None, "Pink Diamonds", "Pink Diamonds Bleeding Heart",
+     None, None, None, None,
+     "IMG_9434.jpeg",
+     "shares photo with White Diamonds; price not captured"),
+    ("DICENTRA", None, "White Diamonds", "White Diamonds Bleeding Heart",
+     None, None, None, None,
+     "IMG_9434.jpeg",
+     "shares photo with Pink Diamonds; price not captured"),
+    ("AQUILEGIA", None, "Origami Blue & White", "Origami Blue & White Columbine",
+     None, "#1", None, None,
+     "396c0266-f1bd-45c8-a000-40b2e66a375a.JPG",
+     "best guess from blue/white spurred flowers — tag text not readable; price not captured"),
 ]
 
 
