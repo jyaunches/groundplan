@@ -874,7 +874,7 @@ areas:
       soil depth, and what vertical surface is available for the vine
       to climb (wall, post, fence, large tree).
     deer_pressure: TBD                 # confirm
-    theme: shaded climber backdrop + spring bleeding heart mid-layer + bellflower groundcover edge
+    theme: shaded climber backdrop + spring bleeding heart mid-layer + bellflower groundcover edge + summer/fall Rudbeckia drift
     plants:
       - name: Hydrangea anomala subsp. petiolaris
         common_name: Climbing Hydrangea
@@ -963,16 +963,87 @@ areas:
           still photosynthesizing into early summer.
         status: ready to order — Diller in stock
 
+      # Summer/fall drift — fills the Dicentra dormancy gap (Jul–frost)
+      - name: Rudbeckia fulgida 'Goldsturm'
+        common_name: Black-Eyed Susan (PA-region native)
+        quantity: 5
+        source: Diller                # #1 container, $6.50 ($32.50 total)
+        role: |
+          Mid-layer summer/fall perennial, ~22" tall × 3 ft wide. Gold
+          ray flowers with black cones July–October — exactly when the
+          Dicentra goes dormant, so this drift fills the bare mid-layer
+          for the back half of the season. Sturdy stems, prairie-native
+          wind tolerance, deer-resistant.
+        site_fit: |
+          ⚠️ Sun mismatch flag — Rudbeckia 'Goldsturm' wants full sun
+          (6+ hrs) for best bloom. Upper paver's working hypothesis is
+          morning sun + afternoon shade (~4 hrs direct), which is
+          part-sun. The plant will grow and flower here, but bloom
+          density will be reduced vs. a full-sun site. Worth the trade
+          to fill the Dicentra dormancy gap, but CONFIRM the actual
+          morning-sun hours on the on-site walk before ordering — if
+          the spot turns out to be heavily shaded all day, re-home to
+          a sunnier area (sp5 driveway top, sp7 pathway-to-paver, or
+          sp3 driveway corners). Hardy zone 3–9; high deer resistance
+          matches the area brief.
+        establishment_care: |
+          Space 18–24" o.c. for the 5 plants — they will form a
+          continuous drift in 1–2 seasons. Plant in spring; water
+          deeply weekly through year 1, then drought-tolerant. Cut
+          back to basal foliage in late fall or leave seedheads
+          standing for winter interest and finch food (then cut in
+          early spring). Divide every 3–4 years to maintain vigor.
+        status: ready to order — Diller in stock (verify sun on site walk first)
+
   - name: Basement walkout bed
     slug: sp9_shade_basementwalkout
-    sun: full shade                    # from dir name
+    sun: full shade                    # confirmed full shade all day (2026-05-03)
     exposure: |
-      TODO — photos in areas_originals/sp9_shade_basementwalkout/.
-      Bed at the basement walkout — likely below-grade, shaded by house
-      and surrounding stairs/walls. Confirm drainage (walkouts often
-      sit at low points and collect runoff) and how much reflected light
-      vs. true deep shade.
-    plants: []                         # TODO
+      Bed on the slope going down to the sliding door at the basement
+      walkout, fully shaded all day. Slope orientation means drainage
+      runs downhill — no pooling concern (typical walkout-pool risk
+      doesn't apply here). Below-grade location, shaded by house and
+      surrounding stairs/walls. Bed footprint not yet measured;
+      current plant counts assume a small bed and should be revisited
+      once dimensions are known.
+    theme: shade-loving foliage with white-margined Hosta accent
+    plants:
+      # Foliage focal — added 2026-05-03; quantity placeholder pending
+      # bed-footprint measurement on site walk
+      - name: Hosta 'Minuteman'
+        common_name: Minuteman Hosta
+        quantity: 3
+        source: Stauffer's
+        target_size: "$24.99 ea ($75 total) — Stauffer's"
+        role: |
+          Medium Hosta, 18–24" tall × 30–36" wide mature. Dark glossy-
+          green leaves with crisp pure-white margins (~½" wide); a
+          dramatic sport of 'Francee' with sharper variegation.
+          Lavender bell flowers on 30–36" scapes briefly in midsummer
+          (foliage is the main show). Sun-tolerant cultivar but full
+          shade here suits it perfectly — leaves may run slightly
+          larger and margins slightly broader in deep shade.
+        site_fit: |
+          Full shade all day matches Hosta's forest-floor evolutionary
+          niche. Slope drainage downhill to the sliding door means no
+          standing-water risk (the typical walkout-pool concern doesn't
+          apply here). Otherwise low-maintenance, long-lived clumps
+          that improve year over year.
+        deer_note: |
+          Hostas are deer candy (Rutgers D — Frequently Severely
+          Damaged). Sp9's enclosed walkout location is likely
+          unappealing to deer (below-grade, surrounded by house walls
+          and stair structure), so this should be safe — but if any
+          browsing is observed in year 1, switch to spray rotation or
+          relocate.
+        establishment_care: |
+          Plant 30–36" o.c. for distinct mounded clumps, or 24–30"
+          o.c. for a more interlocking groundcover effect. Spring or
+          fall planting; water deeply weekly year 1. Mulch 2" deep
+          ring kept off the crown. Cut back yellowed foliage in late
+          fall for tidy winter appearance. Long-lived (20+ years
+          undisturbed).
+        status: pending Stauffer's stock check + bed footprint measurement
 
   - name: Garrett property line
     slug: garrett_property_line       # perimeter planting along the property line — no photo dir
