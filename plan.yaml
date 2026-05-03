@@ -874,7 +874,7 @@ areas:
       soil depth, and what vertical surface is available for the vine
       to climb (wall, post, fence, large tree).
     deer_pressure: TBD                 # confirm
-    theme: shaded fragrant climber backdrop
+    theme: shaded climber backdrop + spring bleeding heart mid-layer + bellflower groundcover edge
     plants:
       - name: Hydrangea anomala subsp. petiolaris
         common_name: Climbing Hydrangea
@@ -901,6 +901,67 @@ areas:
           after bloom (blooms on old wood — pruning in spring or fall
           sacrifices the next year's flowers).
         status: TBD — confirm site exposure and support surface before ordering
+
+      - name: Campanula 'Blue Waterfall'
+        common_name: Serbian Bellflower (Blue Waterfall)
+        quantity: 5
+        source: Diller                # #1 container, $7.50
+        role: |
+          Low spreading evergreen perennial groundcover, ~8" tall × 3 ft
+          wide. Cascading habit covered in star-shaped lavender-blue
+          flowers late spring into summer, with sporadic rebloom. Fills
+          in around the base of the climbing hydrangea and softens the
+          paver edge. Deer- and rabbit-resistant.
+        site_fit: |
+          Dappled / morning-sun + afternoon-shade exposure matches the
+          area's working hypothesis exactly — same sweet spot as the
+          climbing hydrangea above it. Tolerates the mountainside wind
+          (low ground-hugging profile). Hardy zone 3–8, well within
+          range. Low water needs once established; pairs well with the
+          hydrangea's deeper-water regime since the Campanula sits at
+          the mulch line and benefits from the same irrigation.
+        establishment_care: |
+          Space 24–30" o.c. for the 5 plants — they will knit together
+          in 1–2 seasons. Plant outside the hydrangea's 3 ft mulch ring
+          so they don't compete at the crown. Water deeply weekly through
+          year 1; drought-tolerant from year 2. Shear lightly after the
+          main spring flush to encourage rebloom and tidy the cascade.
+        status: ready to order — Diller in stock
+
+      # Mid-layer spring focal — added 2026-05-03
+      - name: Dicentra spectabilis
+        common_name: Old-Fashioned Bleeding Heart
+        quantity: 5
+        source: Diller
+        target_size: "$9 ea ($45 total) — Diller"
+        role: |
+          Mid-layer perennial, 24–36" tall × 18–24" wide. Arching
+          racemes of pink-and-white heart-shaped flowers April–June
+          (classic spring cottage-garden silhouette). Ferny blue-green
+          foliage. Fills the vertical gap between the climbing
+          hydrangea above and the Campanula 'Blue Waterfall' edge
+          below — shares the same sun brief as both.
+        site_fit: |
+          Morning sun + afternoon shade is the textbook condition for
+          Dicentra. Wants consistent moisture and rich soil; benefits
+          from the same irrigation regime as the hydrangea. Deer-
+          resistant (Rutgers B — isoquinoline alkaloids deter browsing).
+        seasonal_note: |
+          Goes dormant by mid-summer in hot weather — foliage yellows
+          and dies back, leaving 5 bare spots in the bed Jul–frost.
+          Campanula edge stays evergreen and hydrangea carries vertical
+          mass, so the bed doesn't go fully bare, but the mid-layer
+          empties. Could be paired with later-emerging shade perennials
+          (Astilbe, Hosta, Brunnera) to fill the dormancy gap;
+          deliberately not adding more here yet — confirm bed footprint
+          on site walk first.
+        establishment_care: |
+          Space 24–36" o.c. for the 5 plants. Plant in spring or fall
+          while dormant for best transplant success. Water deeply weekly
+          through year 1; drought-tolerant from year 2 once roots
+          establish. Don't cut foliage until fully yellow — plant is
+          still photosynthesizing into early summer.
+        status: ready to order — Diller in stock
 
   - name: Basement walkout bed
     slug: sp9_shade_basementwalkout
