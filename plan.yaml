@@ -40,7 +40,8 @@ areas:
       silhouette, Aug–Oct) to fill bloom gaps and extend season. Added
       Brunnera 'Jack Frost' for true-blue spring flowers + silver foliage
       (chosen over a blue hydrangea, which would have scorched in the
-      afternoon sun).
+      afternoon sun). Clethra 'Ruby Spice' removed 2026-05-03 — bed now
+      has no flowering shrub and no July–August bloomer; replacement TBD.
 
     plants:
       # Anchor — back of corner
@@ -49,13 +50,6 @@ areas:
         quantity: 1
         source: Diller
         role: Anchor — evergreen holly-like leaves with bright yellow Feb–Mar blooms
-
-      # Mid-layer flowering shrub — PA native, fragrant
-      - name: Clethra alnifolia 'Ruby Spice'
-        common_name: Summersweet
-        quantity: 1
-        source: Diller
-        role: PA native fragrant shrub, ~5 ft mature (occasionally larger), pink bottlebrush blooms July–August, tolerates part shade. Replaces Hydrangea 'Annabelle' — chose Clethra for fragrance by front door, native status, and to bring pink into the white-heavy palette.
 
       # Coneflower-silhouette / fall extender
       - name: Anemone x hybrida 'Honorine Jobert'
@@ -307,176 +301,194 @@ areas:
     sun: full sun
     exposure: |
       Linear bed at the top of the driveway. Open mountainside with no
-      overhead shade. Drip irrigation possible (run a hose loop along the
-      back) — used as backup during drought, not life support. Plants
-      still skewed drought-tolerant as the dominant strategy.
+      overhead shade. Drip irrigation now more important than in the
+      prior drought-bombproof design — daylilies require consistent
+      moisture (more than Baptisia/Asclepias did). Run a hose loop
+      along the back; daylilies and salvia want regular weekly water
+      through summer.
+    deer_pressure: high                  # mountainside; daylilies are deer candy (Rutgers D)
     palette_intent: |
-      Lavender (only purple), with strong blue (Veronica + Ceratostigma +
-      Agastache + Baptisia), apricot/orange (Achillea + Asclepias +
-      Echinacea apricot), yellow (Coreopsis + Rudbeckia + Sedum 'Angelina'),
-      and white (Echinacea white + Allium 'Mount Everest'). Less pink than
-      the original draft — Sedum 'Autumn Joy' is the only pink-leaning
-      plant, kept for fall transition and winter structure.
+      Purple + white + soft pink-cream (overhauled 2026-05-03 — see
+      notes; daylily cultivars revised 2026-05-03 from the original
+      pure-white-and-deep-purple intent to softer pastels). Three
+      layers: deep-purple Buddleia 'Groovy Grape' butterfly bushes at
+      back; pink-cream daylilies (Chosen Love + Lullaby Baby, mail-
+      order from Oakes) in the middle; matched-pair 'Profusion' salvia
+      (white + violet from Stauffer's) along the front as olfactory
+      deer deterrent. Echinacea 'Pow Wow White' adds a second deer-
+      resistant white mass. Sedum 'Angelina' kept as front-edge
+      chartreuse mat for year-round coverage. White Allium 'Mount
+      Everest' kept as palette-matched May–Jun bulb accent.
     notes: |
-      Bloom calendar: Mar-May Daffodils → May-Jun Baptisia indigo + Lavender
-      + white Allium → Jun-Aug Veronica blue + Achillea apricot + Echinacea
-      white + Asclepias orange + Echinacea apricot → Jul-Sep Coreopsis +
-      Rudbeckia + Agastache blue → Aug-Oct Ceratostigma cobalt blue + Sedum
-      'Autumn Joy' coral → winter Spiraea structure + Sedum dried heads +
-      Sedum 'Angelina' chartreuse evergreen mat + Heuchera 'Caramel' +
-      Lavender semi-evergreen + Ceratostigma red-burgundy fall foliage.
-      See plan_layouts/top_layout.png for top-down spatial diagram.
+      OVERHAUL 2026-05-03 — full bed redesign from the prior maximalist
+      drought-bombproof pollinator showcase to a purple + white
+      minimalist focused on daylilies. Removed 13 cultivars (~45
+      plants); see "Removed in 2026-05-03 overhaul" comment block
+      after the area for the full list. Three of those were PA
+      natives (Baptisia, Asclepias, Rudbeckia) — they could be
+      re-homed to other areas (Garrett property line is a natural
+      candidate for the deer-resistant natives) rather than dropped
+      entirely; flagged for follow-up.
+
+      Bloom calendar of new design: Mar–May Daffodils → May–Jun white
+      Allium 'Mount Everest' + early Salvia 'Profusion' spikes → Jun–
+      Aug daylilies + Buddleia + Echinacea + ongoing Salvia → Aug–
+      frost Buddleia + Echinacea (re-bloom if deadheaded) → winter
+      Sedum 'Angelina' chartreuse mat (the only winter color in the
+      bed; ~50% structural drop vs. prior design).
+
+      Deer strategy: daylilies are highly browsed (Rutgers D —
+      Frequently Severely Damaged). Salvia 'Profusion' matched pair
+      forms an aromatic olfactory wall along the front; Echinacea adds
+      a second deer-resistant white mass behind the Salvia. Even with
+      this companion-planting strategy, expect 30–40% daylily bud loss
+      in heavy-pressure years; active spray (Liquid Fence on a 2-week
+      rotation during bud formation, May–Jul) closes the gap.
+
+      See plan_layouts/top_layout.png for the prior layout diagram —
+      needs to be redrawn for the new design.
 
     plants:
-      # Back row (2.5-4 ft tall)
-      - name: Baptisia australis
-        common_name: Wild Indigo (PA native)
-        quantity: 1
-        source: Octoraro Native Plant Nursery (~50 min from Harrisburg) or Edge of the Woods (Allentown ~90 min) or Bluestone (mail-order)
-        status: tentative
-        alternatives:
-          - "Baptisia 'Decadence Deluxe' series — many color cultivars, yellow/blue/cream"
-          - "Baptisia 'Twilite Prairieblues' (smoky purple-yellow bicolor)"
-        role: Tallest back-row structural piece; deep blue-violet spires May-Jun, shrub-sized (3-4 ft × 4 ft); deep tap root, drought-bombproof, PA native
-
-      - name: Veronica spicata 'Royal Candles'
-        common_name: Spike Speedwell
-        quantity: 5                     # increased from 3 — Veronica is the only blue Diller carries
-        source: Diller
-        status: planned
-        role: True blue spikes Jun-Aug; vertical accents distributed across back/mid
-
-      - name: Lavandula angustifolia 'Phenomenal'
-        common_name: Phenomenal Lavender
+      # Back row — 3 butterfly bushes spaced ~4-5 ft along the 14 ft back edge
+      - name: Buddleia davidii 'Groovy Grape'
+        common_name: Groovy Grape Butterfly Bush
         quantity: 3
         source: Diller
-        status: planned
-        role: Back-row drift; the only purple in the design; heat-tolerant cultivar, semi-evergreen blue-grey foliage
+        target_size: "$31.50 ea ($94.50 total) — Diller (container TBD)"
+        role: |
+          Back-row anchor — three deep-purple butterfly bushes spaced
+          ~4–5 ft apart along the 14 ft back edge. Compact 2–3 ft × 2–3 ft
+          (Proven Winners InSpired-series). Fragrant butterfly + hummingbird
+          magnet, blooms June through frost. Deer-resistant (Rutgers A–B).
+          Hard prune to 12" each spring (blooms on new wood).
+        invasive_note: |
+          B. davidii is on the PA Invasive Plant List. 'Groovy Grape' is
+          a newer compact cultivar with reduced seed-set; deadhead spent
+          spikes through summer to minimize escape.
+        status: pending Diller stock check (2026-05-03)
 
-      - name: Achillea 'Apricot Delight'
-        common_name: Yarrow (apricot)
+      # Middle row — pink-cream daylilies, ~24-30" o.c. across the bed
+      - name: Hemerocallis 'Chosen Love'
+        common_name: Chosen Love Daylily (pink with yellow throat)
         quantity: 3
-        source: Bluestone Perennials (mail-order) — also try Stauffer's
-        status: tentative
-        alternatives:
-          - "Achillea 'Terracotta' (peach-rust)"
-          - "Achillea 'Strawberry Seduction' (red-orange)"
-        role: Apricot-peach blooms Jun-Sep + silver-grey ferny foliage; drought-bombproof
+        source: Oakes Daylilies (mail-order)
+        target_size: "$54 for 3 (Oakes quantity-discount price, 2026-05-03 cart)"
+        role: |
+          Soft pink daylily with yellow throat, repeat bloomer. Mid-row
+          mass — three plants distributed through the middle of the
+          bed, alternating with 'Lullaby Baby' for a pink-cream
+          tapestry. Bloom Jun–Aug; dies back to clumping foliage in
+          fall.
+        deer_note: |
+          Highly browsed (Rutgers D — Frequently Severely Damaged).
+          Front-row Salvia + Echinacea provide companion-planting
+          confusion; expect 30–40% bud loss in heavy years even with
+          companions. Active spray rotation (Liquid Fence, 2 weeks)
+          recommended during bud formation May–Jul.
+        status: ordered (Oakes Daylilies cart 2026-05-03)
 
-      - name: Agastache 'Blue Fortune'
-        common_name: Anise Hyssop (blue)
+      - name: Hemerocallis 'Lullaby Baby'
+        common_name: Lullaby Baby Daylily (pale cream-pink, fragrant)
+        quantity: 2
+        source: Oakes Daylilies (mail-order)
+        target_size: "$59.98 for 2 (Oakes price, 2026-05-03 cart)"
+        role: |
+          Pale cream-pink daylily, classic Stout 1975 introduction —
+          fragrant, reliable repeat bloomer, ~20–22" tall. Mid-row
+          accents interplanted with 'Chosen Love'. Slightly shorter and
+          paler than 'Chosen Love' for visual rhythm.
+        deer_note: see 'Chosen Love'
+        status: ordered (Oakes Daylilies cart 2026-05-03)
+
+      # Front row — Salvia matched pair (aromatic deer deterrent +
+      # white/purple rhythm that echoes the daylily middle row)
+      - name: Salvia nemorosa 'White Profusion'
+        common_name: White Meadow Sage
         quantity: 3
-        source: Bluestone Perennials (mail-order) — also try local nursery on arrival
-        status: tentative
-        alternatives:
-          - "Agastache 'Black Adder' (deeper purple-blue)"
-          - "Agastache 'Apricot Sunrise' (apricot — would shift the role to a 2nd apricot drift)"
-          - "Agastache 'Blue Boa' (taller, larger blooms)"
-        role: Sky-blue spikes Jul-Sep, hummingbird magnet, fragrant foliage; replaces Liatris's vertical role
+        source: Stauffer's
+        target_size: "#1 container, $19.99 ea ($60 total)"
+        role: |
+          White flower spikes May–Jul, ~2 ft tall mounding clump. Strong
+          sage-family aromatic foliage = primary olfactory deer deterrent
+          for the daylily layer behind. Paired with 'Violet Profusion'
+          for matched white+purple front-row rhythm that echoes the
+          daylily white+purple middle row.
+        site_fit: |
+          Plant in a tight alternating row with 'Violet Profusion' along
+          the front of the bed, between the daylilies and the path edge.
+          Deadhead spent spikes for repeat bloom into late summer.
+        status: pending Stauffer's stock check (2026-05-03)
 
-      # Mid row — 2 ft tall, summer flower mass
-      - name: Asclepias tuberosa
-        common_name: Butterfly Weed (orange, PA native)
+      - name: Salvia nemorosa 'Violet Profusion'
+        common_name: Violet Meadow Sage
         quantity: 3
-        source: Stauffer's of Kissel Hill (Linglestown — call first, may have orange or only 'Hello Yellow') / Octoraro / mail-order
-        status: tentative
-        alternatives:
-          - "Asclepias tuberosa 'Hello Yellow' (yellow form — confirmed at Stauffer's)"
-          - "Asclepias incarnata (Swamp Milkweed — pink, prefers moisture, less drought-tough)"
-        role: Bright orange Jun-Aug, monarch host plant, deep tap root; drought-bombproof, PA native
+        source: Stauffer's
+        target_size: "#1 container, $19.99 ea ($60 total)"
+        role: |
+          Deep violet flower spikes May–Jul, ~2 ft tall mounding clump.
+          Identical form to 'White Profusion' but in violet — matched
+          pair from the same series. Aromatic deer deterrent. Same
+          alternating front-row placement.
+        status: pending Stauffer's stock check (2026-05-03)
 
-      - name: Echinacea 'Sundown'
-        common_name: Coneflower (apricot)
-        quantity: 3
-        source: Bluestone Perennials (mail-order)
-        status: tentative
-        alternatives:
-          - "Echinacea 'Hot Papaya' (more orange, double blooms)"
-          - "Echinacea 'Tomato Soup' (red shift)"
-          - "Echinacea 'Sunset' (apricot-coral)"
-        role: Apricot-orange cones; pairs with Asclepias for warm tones in mid-row
-
-      - name: Spiraea japonica 'Goldmound'
-        common_name: Spiraea
-        quantity: 1
-        source: Diller
-        status: planned
-        role: Mid-row anchor; gold foliage Apr-Oct + brief pink Jul flowers (kept despite small pink contribution for the foliage value)
-
+      # Front mid-mass — additional deer-resistant white anchor between
+      # the salvia row and the daylilies
       - name: Echinacea purpurea 'Pow Wow White'
         common_name: White Coneflower
         quantity: 5
         source: Diller
-        status: planned
-        role: Mid-row mass; pure white cones Jun-Sep, PA native
+        target_size: "#1 container, $6.50–7.50 ea (~$33–38 total)"
+        role: |
+          White coneflower mass behind the Salvia row, in front of the
+          daylilies. Pure white cones with golden centers Jun–Sep.
+          Reinforces the white note from the matched-pair Salvia and
+          adds a second deer-resistant deterrent layer that bridges
+          path-side to daylily mid-row. Reliably deer-resistant
+          (Echinacea is one of the few flowering perennials deer truly
+          avoid).
+        status: planned (kept from prior design)
 
-      # Mid-front (1-1.5 ft, yellow / blue / sedum band)
-      - name: Coreopsis verticillata 'Moonbeam'
-        common_name: Threadleaf Coreopsis
-        quantity: 5
-        source: Diller
-        status: planned
-        role: Soft yellow Jun-Sep, ferny foliage, drought-tolerant
-
-      - name: Rudbeckia fulgida 'Goldsturm'
-        common_name: Black-Eyed Susan
-        quantity: 5
-        source: Diller
-        status: planned
-        role: Bold golden Jul-Oct, PA native, long bloom
-
-      - name: Sedum 'Autumn Joy'
-        common_name: Autumn Stonecrop
-        quantity: 3                     # reduced from 5 (less pink)
-        source: Diller
-        status: planned
-        role: Coral-rust Sep + winter dried heads (the only pink-leaning plant kept; reduced count)
-
-      - name: Ceratostigma plumbaginoides
-        common_name: Hardy Plumbago
-        quantity: 3
-        source: Diller
-        status: planned
-        role: True cobalt-blue blooms Aug-Oct (rare late-summer blue) + red-burgundy fall foliage; low-spreading, drought-tolerant
-
-      # Front edge (6 in - 1 ft)
-      - name: Heuchera 'Caramel'
-        common_name: Coral Bells (caramel-orange)
-        quantity: 3
-        source: Diller
-        status: planned
-        role: Caramel-orange foliage all season (replaces 'Palace Purple' burgundy); needs occasional irrigation in this drier site
-
+      # Front edge — chartreuse mat for year-round coverage
       - name: Sedum 'Angelina'
         common_name: Stonecrop (chartreuse)
         quantity: 5
         source: Diller
-        status: planned
-        role: Front-edge succulent mat; chartreuse-gold foliage year-round, replaces Liriope/Dianthus front-edge role
+        target_size: "#1 container, ~$6.50 ea (~$32 total)"
+        role: |
+          Front-edge succulent mat, chartreuse-gold foliage year-round —
+          the only winter color in the bed after perennials die back.
+          Kept from prior design; works as front edge regardless of
+          theme. Deer-resistant.
+        status: planned (kept from prior design)
 
-      # Bulbs (fall plant for next spring)
+      # Bulbs — interplanted throughout for spring + early-summer color
       - name: Narcissus mixed (early/mid/late season)
         common_name: Daffodils
         quantity: 30
         source: Brent and Becky's Bulbs (mail-order) or Van Engelen
-        status: tentative
-        alternatives:
-          - "Mixed-season collections from any major bulb supplier"
-        role: Mar-May spring color progression; deer-proof; interplant throughout
+        target_size: ~$0.50–1.00 per bulb
+        role: |
+          Mar–May spring color progression, deer-proof. Interplant
+          throughout the bed including under future Buddleia spots.
+          Kept from prior design.
         timing: plant fall 2026
+        status: tentative — needs sourcing (mail-order, fall 2026)
 
       - name: Allium 'Mount Everest'
         common_name: White Giant Allium
         quantity: 12
         source: Brent and Becky's Bulbs (mail-order)
-        status: tentative
-        alternatives:
-          - "Allium nigrum (smaller, white star-clusters)"
-          - "Allium 'White Giant' (similar)"
-        role: 3-4 ft white drumsticks May-Jun (replaces purple 'Purple Sensation'); interplant in mid-row pockets
+        target_size: ~$3–5 per bulb
+        role: |
+          3–4 ft white drumsticks May–Jun. Palette match for the
+          purple+white redesign. Interplant in mid-row pockets between
+          daylily clumps for early-season vertical accents before the
+          daylilies and salvia hit peak. Kept from prior design.
         timing: plant fall 2026
+        status: tentative — needs sourcing (mail-order, fall 2026)
 
-    # Total: ~50 perennials + 42 bulbs in 70 sqft. Maximalist density.
+    # Total: 22 perennials + 42 bulbs in 70 sqft. Significantly less
+    # dense than the prior maximalist design (~50 perennials).
 
   # Removed from earlier draft (purple/pink reduction):
   #   Liatris 'Kobold' ×5            → replaced by Agastache 'Blue Fortune' + Baptisia
@@ -487,9 +499,25 @@ areas:
   #   Heuchera 'Palace Purple' ×3    → swapped to Heuchera 'Caramel'
   #   Echinacea 'Cheyenne Spirit' ×5 → split to Echinacea 'Pow Wow White' (×5) + Echinacea 'Sundown' (×3)
   #   Allium 'Purple Sensation'      → swapped to Allium 'Mount Everest' (white)
+  #
+  # Removed in 2026-05-03 overhaul (sp5 redesigned to purple+white minimalist):
+  #   Baptisia australis ×1            (PA native — re-home candidate, e.g. Garrett property line)
+  #   Veronica spicata 'Royal Candles' ×5
+  #   Lavandula angustifolia 'Phenomenal' ×3
+  #   Achillea 'Apricot Delight' ×3
+  #   Agastache 'Blue Fortune' ×3
+  #   Asclepias tuberosa ×3            (PA native — re-home candidate, e.g. Garrett property line)
+  #   Echinacea 'Sundown' ×3
+  #   Spiraea japonica 'Goldmound' ×1
+  #   Coreopsis verticillata 'Moonbeam' ×5
+  #   Rudbeckia fulgida 'Goldsturm' ×5  (PA native — re-home candidate, e.g. Garrett property line)
+  #   Sedum 'Autumn Joy' ×3
+  #   Ceratostigma plumbaginoides ×3
+  #   Heuchera 'Caramel' ×3
+  # Kept: Sedum 'Angelina', Echinacea 'Pow Wow White', Narcissus, Allium 'Mount Everest'.
 
-  - name: Driveway top backdrop tree
-    slug: driveway_top_magnolia       # single-tree placement — no photo dir
+  - name: Hot tub patio
+    slug: driveway_top_magnolia       # slug retained as stable id; area renamed from "Driveway top backdrop tree"
     sun: full sun
     exposure: |
       Behind / above the linear sp5 driveway-top bed. Mountainside, open
@@ -572,6 +600,62 @@ areas:
           growth). First reliable bloom usually year 2 or 3.
         status: pending Diller stock check (2026-04-26) — see pre_purchase_checklist
 
+      - name: Lonicera periclymenum 'Scentsation'
+        common_name: Scentsation Honeysuckle (woodbine)
+        quantity: 1
+        source: TBD — not stocked at Diller or Stauffer's; source via mail-order
+          (Bluestone Perennials, Wayside Gardens) or call around to local nurseries
+        target_size: "#1 or #2 container"
+        role: |
+          Fragrant flowering vine to climb the hot tub pergola. Bred and
+          selected specifically for scent — strong sweet honeysuckle
+          fragrance, yellow tubular flowers May through first frost, red
+          berries in fall. Reaches 10–15 ft, twining habit. Hardy zone
+          4–9, full sun (tolerates part shade with reduced bloom).
+          Non-invasive (unlike Japanese honeysuckle / L. japonica).
+        site_fit: |
+          South-facing pergola exposure handles the heat well. Wind on
+          the mountainside isn't a problem once the vine is established
+          and tied in — twining stems are flexible and the pergola
+          anchors the foliage. Deer-tolerant but not bulletproof; rate
+          of browse here should be lower since deer pressure in this
+          area is rated low (same as the magnolia's rating).
+        establishment_care: |
+          Plant 12–18" out from the pergola post, lean toward the
+          structure, tie loosely to start it climbing. Mulch 2–3" deep,
+          keep off the crown. Deep weekly watering year 1. Prune lightly
+          in early spring (after worst freezes) to shape and remove
+          deadwood — blooms on new wood so spring pruning won't sacrifice
+          flowers. Fertilize lightly in spring once established.
+        status: needs sourcing — not in current Diller/Stauffer's catalogs
+
+      # Narrow columnar evergreen windbreak for the pergola vine
+      - name: Cephalotaxus harringtonia 'Fastigiata'
+        common_name: Japanese Plum Yew (columnar)
+        quantity: 2
+        source: Diller
+        target_size: "#3 container, $38.50 (catalog id 81)"
+        role: |
+          Narrow upright evergreen windbreak for the pergola vine.
+          Fastigiate (strictly columnar) form, 8 ft × 3 ft mature — tops
+          out under the 10–15 ft Magnolia 'Jane' so it doesn't compete
+          visually. Deer-bulletproof (cephalotaxus is the standard yew
+          alternative). Shade-tolerant, which matters for the spot tucked
+          between the house and the magnolia.
+        site_fit: |
+          Plant on the windward side of the pergola (NW for central PA
+          prevailing winter wind) to shelter the lower 4–5 ft of the
+          climbing vine. An 8 ft windbreak only protects ~4–5 ft of still
+          air above its top, so the upper pergola canopy stays exposed —
+          relevant when choosing the vine (group-3 clematis cut to 12"
+          each spring or new-wood bloomers tolerate this; old-wood
+          bloomers like C. montana don't).
+        establishment_care: |
+          Slow grower — expect 4–5 years from #3 container to functional
+          windbreak height. Water deeply weekly year 1, monthly after
+          establishment. No pruning needed to maintain narrow form.
+        status: pending Diller stock check (2026-05-03)
+
   # ============================================================
   # STUBS — areas photographed but not yet planned.
   # Site conditions inferred from directory name only; confirm
@@ -628,20 +712,6 @@ areas:
           generally walk around rather than into.
         timing: spring planting; cut back hard mid-summer if foliage flops
 
-      # Mid-bed clumps — fall bloom + structure
-      - name: Sedum 'Autumn Joy'
-        common_name: Autumn Joy Stonecrop
-        quantity: 5
-        source: Diller
-        target_size: "$6.50 ea (likely single #1 containers — confirm with Diller)"
-        role: |
-          Upright clumping sedum, 18–24" tall × 18" wide. Pink broccoli-
-          like flower heads emerging in late summer, deepening to rust-
-          red in fall, holding their structure into winter. Deer-
-          resistant, drought-tolerant, pollinator magnet. Place as
-          accent clumps inside the Geranium ring for fall bloom and
-          winter silhouette when everything else has died back.
-
       # Focal flowering shrub — yellow-orange spring bloom
       - name: Rhododendron 'Capistrano'
         common_name: Capistrano Rhododendron
@@ -671,25 +741,81 @@ areas:
           bloom. Reliably deer-resistant (Echinacea is one of the few
           flowering perennials deer truly avoid), drought-tolerant
           once established, pollinator and goldfinch magnet (leave
-          seed heads through fall/winter for the birds). Place as a
-          mid-height layer between the Sedum 'Autumn Joy' clumps —
-          white reads cleanly against the violet-blue Geranium ring
-          and the yellow Capistrano blooms.
+          seed heads through fall/winter for the birds). Cluster the
+          3 plants together in a tight trio (~12–15" between centers)
+          on the south/sunny side of the Capistrano rhodo — reads as a
+          single mass against the rhodo's evergreen backdrop, white
+          against pale yellow + violet-blue.
 
-      # Inner-bed groundcover — low carpet around hydrangea drip line
-      - name: Sedum spurium 'Dragon's Blood'
-        common_name: Dragon's Blood Stonecrop
-        quantity: 1                       # one flat (~30–50 plugs)
+      # Inner-bed groundcover — replaced Dragon's Blood 2026-05-03
+      - name: Cotoneaster dammeri 'Coral Beauty'
+        common_name: Bearberry Cotoneaster
+        quantity: 3
         source: Diller
-        target_size: "$29.50 — almost certainly a flat/tray; confirm plug count with Diller"
+        target_size: "#2 container, $23 ea ($69 total) — or #3 at $30 ea ($90 total)"
         role: |
-          Low creeping succulent groundcover, 3–6" tall, red-tinged
-          foliage with magenta star-flowers in summer. Deer-resistant,
-          drought-tolerant, evergreen-ish in mild winters. Fills the
-          inner-bed floor around the existing hydrangea's drip line
-          and between Autumn Joy clumps. Plant plugs at 8–10" o.c.;
-          fills in by year 2. One flat should comfortably cover the
-          inner-bed area minus the hydrangea footprint.
+          Low spreading woody groundcover, 1 ft tall × 3 ft spread per
+          plant. Forms a dense glossy-green mat at the inner-bed floor.
+          White apple-blossom-style flowers in spring; coral-red
+          berries late summer through early winter (the cultivar's
+          namesake, hence the name); semi-evergreen foliage with bronze
+          winter tints. Bird-friendly — robins and waxwings strip the
+          berries through December.
+        site_fit: |
+          Inner-bed groundcover. 3 plants at 3-ft spread cover ~25 sqft
+          of open inner-bed ground (after rhodo, hydrangea, Buddleia,
+          Echinacea, and perimeter Geranium ribbon footprints). Adds
+          the only 4-season element to the bed — every other plant
+          goes dormant in winter; Cotoneaster carries the bed visually
+          November through March with persistent foliage and berries.
+        deer_note: |
+          Catalog rates "high" deer resistance; Rutgers-scale equivalent
+          is "B — Seldom Severely Damaged" (not bulletproof). Better-
+          defended than the existing browsed hydrangea and the
+          Capistrano rhodo. Low profile + waxy leaves help — deer
+          prefer eye-height browse and tender new growth.
+        establishment_care: |
+          Slow first year ("sleep, creep, leap"). Plant 3 ft on-center;
+          full coverage by year 2–3. Water deeply weekly through summer
+          year 1; established plants are very drought-tolerant. Watch
+          for fire blight (Erwinia amylovora) — moderately susceptible;
+          if a branch turns black + shepherd's-crook, prune 12" below
+          damage and disinfect tools.
+        status: pending Diller stock check (2026-05-03)
+
+      # Mid-shrub butterfly bush — purple bloom layer + pollinator anchor
+      - name: Buddleia davidii 'Groovy Grape'
+        common_name: Groovy Grape Butterfly Bush
+        quantity: 1
+        source: Diller
+        target_size: "$31.50 (container TBD with Diller)"
+        role: |
+          Compact butterfly bush, ~2–3 ft × 2–3 ft mature (newer
+          Proven Winners InSpired-series compact, smaller than classic
+          B. davidii). Deep purple flower spikes June through frost,
+          fragrant, butterfly + hummingbird magnet. Deer-resistant
+          (Rutgers A–B). Reinforces the violet-blue note from the
+          Geranium 'Rozanne' perimeter ring at a taller mid-shrub
+          layer; pairs cleanly with the Capistrano's pale yellow May
+          blooms (both visible together in early summer overlap) and
+          the white Echinacea trio.
+        site_fit: |
+          Place at mid-bed beside or just behind the Capistrano rhodo,
+          on a sunny side that won't be shaded by the rhodo's
+          evergreen mass. Buddleia needs full sun and well-drained
+          soil — it's drought-tolerant once established and dislikes
+          wet feet. Hard prune to 12" each spring (blooms on new wood
+          — same Group-3 schedule as the clematis idea earlier, so
+          spring pruning is a natural rhythm for the bed).
+        invasive_note: |
+          Buddleia davidii is on the PA Invasive Plant List. 'Groovy
+          Grape' is a newer compact cultivar (Proven Winners
+          InSpired series) with reduced seed-set vs. classic B.
+          davidii cultivars like 'Black Knight'; not as well-
+          documented as the 'Pugster' or 'Miss' series for sterility,
+          so deadhead spent flower spikes through summer to minimize
+          any seed escape.
+        status: pending Diller stock check (2026-05-03)
 
   - name: Main stairs bed
     slug: sp6_full_sun_main_stairs
@@ -698,7 +824,26 @@ areas:
       TODO — photos in areas_originals/sp6_full_sun_main_stairs/.
       Confirm orientation (front entry stairs?), sqft, soil depth (often
       shallow against stair foundations).
-    plants: []                         # TODO
+    theme: 3-color palette anchored on Sedum 'Dragon's Blood' (TBD — see notes)
+    notes: |
+      Palette intent: limit to 3 main colors. Dragon's Blood anchors the
+      bed with red-tinged foliage + magenta summer flowers; remaining
+      two colors TBD (see palette options surfaced 2026-05-03).
+
+    plants:
+      # Groundcover anchor — moved here 2026-05-03 from sp4
+      - name: Sedum spurium 'Dragon's Blood'
+        common_name: Dragon's Blood Stonecrop
+        quantity: 1                       # one flat (~30–50 plugs)
+        source: Diller
+        target_size: "$29.50 — almost certainly a flat/tray; confirm plug count with Diller"
+        role: |
+          Low creeping succulent groundcover, 3–6" tall, red-tinged
+          foliage with magenta star-flowers in summer. Deer-resistant,
+          drought-tolerant, evergreen-ish in mild winters. Anchors the
+          floor of the stairs bed; full-sun exposure here means strong
+          red foliage tint and full bloom. Plant plugs at 8–10" o.c.;
+          fills in by year 2.
 
   - name: Pathway to paver bed
     slug: sp7_full_sun_pathway_to_paver
@@ -718,6 +863,44 @@ areas:
       afternoon shade or filtered light. Confirm count (2 corners? 4?)
       and sqft each.
     plants: []                         # TODO
+
+  - name: Upper paver
+    slug: upper_paver                  # no photo dir yet — conditions to confirm on site
+    sun: morning sun (TBD)             # confirm — likely morning sun, afternoon shade
+    exposure: |
+      TODO — confirm orientation and exposure on site. Working hypothesis:
+      gets morning sun, then shade through the afternoon (which is exactly
+      the sweet spot for climbing hydrangea). Confirm wind exposure,
+      soil depth, and what vertical surface is available for the vine
+      to climb (wall, post, fence, large tree).
+    deer_pressure: TBD                 # confirm
+    theme: shaded fragrant climber backdrop
+    plants:
+      - name: Hydrangea anomala subsp. petiolaris
+        common_name: Climbing Hydrangea
+        quantity: 1
+        source: Diller                # carried as HYDRANGEA petiolaris in catalog
+        role: |
+          Self-clinging climbing vine via aerial rootlets — attaches
+          directly to walls, posts, or tree trunks without trellising.
+          White lacecap flower clusters in early summer; rich green
+          heart-shaped foliage; cinnamon-brown peeling bark for winter
+          interest. Reaches 30–50 ft on a tall support, but easily kept
+          smaller. Ideal sun exposure is morning sun + afternoon shade.
+        site_fit: |
+          Morning-sun + afternoon-shade exposure is the textbook spot for
+          this plant — full afternoon sun on a hot wall would scorch the
+          foliage. Consistent moisture is required; mulch heavily and
+          plan for deep weekly watering through year 1–2. Slow to
+          establish ("sleep, creep, leap") — first reliable bloom often
+          year 3–5, but the plant is very long-lived once settled.
+        establishment_care: |
+          Plant 12" out from the support surface. Mulch 3" deep, 3 ft
+          ring, kept off the crown. Deep weekly watering year 1 and 2.
+          No pruning needed except shaping; if pruning, do it right
+          after bloom (blooms on old wood — pruning in spring or fall
+          sacrifices the next year's flowers).
+        status: TBD — confirm site exposure and support surface before ordering
 
   - name: Basement walkout bed
     slug: sp9_shade_basementwalkout
@@ -739,7 +922,7 @@ areas:
       effect is roughly 4–5 hours of direct afternoon sun — part-sun
       conditions. Mountainside wind exposure on this side TBD.
     deer_pressure: high                # perimeter / property edge — deer browse heavily
-    theme: fragrant deer-resistant flowering shrubs — staggered spring + summer bloom
+    theme: fragrant deer-resistant shrubs + PA-native perennial accents — staggered spring/summer bloom
     notes: |
       Pairing two Viburnum carlesii 'Carlcephalum' as spring fragrance
       anchors (April–May, exceptional carrying scent) with four Clethra
@@ -749,6 +932,22 @@ areas:
       palette for visual continuity. Spacing TBD pending property-line
       length measurement; typical Carlcephalum at ~6–8 ft o.c. and
       Ruby Spice at ~5 ft o.c.
+
+      Added 2026-05-03 (re-homed from sp5 Driveway top bed overhaul):
+      Baptisia australis ×1 (blue-violet spires May–Jun), Asclepias
+      tuberosa ×3 (orange Jun–Aug, monarch host), Rudbeckia 'Goldsturm'
+      ×5 (gold Jul–Oct). All three are deer-resistant PA natives that
+      fit Garrett's high-deer-pressure perimeter brief and add
+      perennial color drifts between the shrub anchors.
+
+      Sun caveat for the rehomed natives: Garrett gets ~4–5 hours of
+      direct afternoon sun (part sun). Baptisia and Rudbeckia tolerate
+      this comfortably. Asclepias tuberosa prefers full sun (6+ hrs)
+      and lean sandy soil — it may underperform here (reduced bloom,
+      slower establishment). Plant in the sunniest open patches of the
+      run; if it limps along for two seasons, consider relocating to a
+      full-sun area (sp7 pathway-to-paver or sp3 driveway corners are
+      the closest full-sun candidates).
 
     plants:
       # Spring fragrance anchors — bookend the run
@@ -764,3 +963,44 @@ areas:
         quantity: 4
         source: Diller
         role: Summer fragrance + color (July–August) — deep rose-pink bottlebrush blooms with honey-spice scent that fills the surrounding air. PA-native species, 5–6 ft, deer-resistant, part-sun tolerant. Same cultivar used at the front foundation corner for continuity. Note — Diller's catalog entry has no extracted price; confirm with Diller before ordering.
+
+      # PA-native perennial accents — re-homed 2026-05-03 from sp5 overhaul
+      - name: Baptisia australis
+        common_name: Wild Indigo (PA native)
+        quantity: 1
+        source: Octoraro Native Plant Nursery (~50 min from Harrisburg) or Edge of the Woods (Allentown ~90 min) or Bluestone (mail-order)
+        role: |
+          Deep blue-violet spires May–Jun, shrub-sized (3–4 ft × 4 ft).
+          Deep tap root, drought-bombproof, deer-resistant, PA native.
+          Place between the Viburnum and Clethra anchors as a
+          structural mid-perimeter accent. Tolerates part sun
+          comfortably.
+        status: tentative — needs sourcing (mail-order or native nursery)
+
+      - name: Asclepias tuberosa
+        common_name: Butterfly Weed (PA native, orange)
+        quantity: 3
+        source: Stauffer's of Kissel Hill (Linglestown — call first, may have orange or only 'Hello Yellow') / Octoraro / mail-order
+        role: |
+          Bright orange Jun–Aug, monarch host plant, deep tap root,
+          deer-resistant, PA native. Re-homed from sp5; sun caveat
+          applies (see area notes — Asclepias prefers full sun, part
+          sun here may reduce bloom; plant in sunniest patches of the
+          run).
+        alternatives:
+          - "Asclepias tuberosa 'Hello Yellow' (yellow form — confirmed at Stauffer's)"
+          - "Asclepias incarnata (Swamp Milkweed — pink, prefers moisture, less drought-tough)"
+        status: tentative — needs sourcing; reconsider site fit if underperforming after 2 seasons
+
+      - name: Rudbeckia fulgida 'Goldsturm'
+        common_name: Black-Eyed Susan (PA native)
+        quantity: 5
+        source: Diller
+        target_size: "#1 container, $6.50 ea ($32.50 total) — or larger at $7.50 ea"
+        role: |
+          Bold golden Jul–Oct blooms, long bloom season, PA native,
+          deer-resistant. Distribute as a perennial drift along the
+          run for late-summer/early-fall color when the Clethra is
+          finishing. Tolerates part sun reasonably; ~4–5 hrs of
+          afternoon sun here is workable.
+        status: planned
