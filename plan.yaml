@@ -626,3 +626,38 @@ areas:
       sit at low points and collect runoff) and how much reflected light
       vs. true deep shade.
     plants: []                         # TODO
+
+  - name: Garrett property line
+    slug: garrett_property_line       # perimeter planting along the property line — no photo dir
+    sun: part sun                     # dappled until ~1pm, direct sun 1–5pm, then house shadow
+    exposure: |
+      Property-line perimeter. Morning is dappled until midday-to-1pm,
+      then direct afternoon sun 1–5pm, then shaded by the house. Net
+      effect is roughly 4–5 hours of direct afternoon sun — part-sun
+      conditions. Mountainside wind exposure on this side TBD.
+    deer_pressure: high                # perimeter / property edge — deer browse heavily
+    theme: fragrant deer-resistant flowering shrubs — staggered spring + summer bloom
+    notes: |
+      Pairing two Viburnum carlesii 'Carlcephalum' as spring fragrance
+      anchors (April–May, exceptional carrying scent) with four Clethra
+      alnifolia 'Ruby Spice' for summer fragrance + deep rose-pink
+      bottlebrushes (July–August). Both genus-level deer resistant and
+      tolerant of part sun. The Clethra continues the front-foundation
+      palette for visual continuity. Spacing TBD pending property-line
+      length measurement; typical Carlcephalum at ~6–8 ft o.c. and
+      Ruby Spice at ~5 ft o.c.
+
+    plants:
+      # Spring fragrance anchors — bookend the run
+      - name: Viburnum carlesii 'Carlcephalum'
+        common_name: Koreanspice Viburnum
+        quantity: 2
+        source: Diller
+        role: Spring fragrance anchor (April–May) — white→pink flower clusters with the canonical "carrying" sweet-spice scent. 5–8 ft mature, deer-resistant, tolerates part sun. Place to bookend the run so the fragrance covers the full perimeter.
+
+      # Summer fragrance + color
+      - name: Clethra alnifolia 'Ruby Spice'
+        common_name: Summersweet (deep pink)
+        quantity: 4
+        source: Diller
+        role: Summer fragrance + color (July–August) — deep rose-pink bottlebrush blooms with honey-spice scent that fills the surrounding air. PA-native species, 5–6 ft, deer-resistant, part-sun tolerant. Same cultivar used at the front foundation corner for continuity. Note — Diller's catalog entry has no extracted price; confirm with Diller before ordering.
