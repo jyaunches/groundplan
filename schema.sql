@@ -17,9 +17,11 @@ CREATE TABLE IF NOT EXISTS catalog_items (
     container       TEXT,                    -- as printed: "#3", "#5", "B&B", etc.
     form            TEXT,                    -- as printed: "Std.", "Clump", "E." (espalier), "Cont." etc.
     price           REAL,                    -- USD
-    page            INTEGER,                 -- catalog page number for traceability
-    source_file     TEXT,                    -- screenshot filename
-    source_notes    TEXT                     -- transcription notes / flags for unclear entries
+    page            INTEGER,                 -- catalog page number for traceability (Diller-specific)
+    source          TEXT,                    -- 'diller' | 'stauffers' (nursery/catalog this row came from)
+    source_file     TEXT,                    -- OCR file (Diller) or photo filename (Stauffer's)
+    source_notes    TEXT,                    -- transcription notes / flags for unclear entries
+    image_local_path TEXT                    -- repo-relative path to a local photo of this offering (e.g. stauffers-photos/<uuid>.JPG)
 );
 
 CREATE INDEX IF NOT EXISTS idx_catalog_genus    ON catalog_items(genus);

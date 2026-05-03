@@ -23,8 +23,9 @@ Output shape:
       "research_confidence",
       "min_price",             // cheapest catalog offering
       "max_price",             // most expensive
+      "sources",               // distinct sources offering this species (e.g. ["diller","stauffers"])
       "offerings": [
-        {"size", "container", "form", "price"}  // every priced row from catalog_items
+        {"size", "container", "form", "price", "source", "image_local_path"}
       ]
     }
   ]
@@ -64,16 +65,19 @@ def main():
     # Group catalog offerings by (genus, species, cultivar) for the join.
     offerings = {}
     for r in cur.execute("""
-        SELECT genus, species, cultivar, size, container, form, price
+        SELECT genus, species, cultivar, size, container, form, price,
+               source, image_local_path
         FROM catalog_items
         WHERE price IS NOT NULL
         ORDER BY price"""):
         key = (r["genus"], r["species"], r["cultivar"])
         offerings.setdefault(key, []).append({
-            "size":      r["size"],
-            "container": r["container"],
-            "form":      r["form"],
-            "price":     r["price"],
+            "size":             r["size"],
+            "container":        r["container"],
+            "form":             r["form"],
+            "price":            r["price"],
+            "source":           r["source"],
+            "image_local_path": r["image_local_path"],
         })
 
     out = []
@@ -91,6 +95,7 @@ def main():
         prices = [o["price"] for o in offs]
         d["min_price"] = min(prices) if prices else None
         d["max_price"] = max(prices) if prices else None
+        d["sources"] = sorted({o["source"] for o in offs if o["source"]})
         out.append(d)
 
     payload = {

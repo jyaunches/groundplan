@@ -40,6 +40,16 @@ function offeringLabel(o: Offering): string {
   return parts.join(' ') || '—'
 }
 
+const SOURCE_LABELS: Record<string, string> = {
+  diller: 'Diller',
+  stauffers: "Stauffer's",
+}
+
+function sourceLabel(source: string | null): string {
+  if (!source) return ''
+  return SOURCE_LABELS[source] ?? source
+}
+
 function formatYears(min: number, max: number): string {
   if (max === 0) return 'already 20 ft+'
   const a = Math.max(1, Math.round(min))
@@ -185,14 +195,34 @@ export function SpeciesCard({ s, shortlisted, showPlantType, onToggleShortlist }
 
         {s.offerings.length > 0 && (
           <div className="mt-2 border-t border-stone-100 pt-1.5">
-            <div className="text-xs font-medium text-stone-500">
-              Sizes available ({s.offerings.length})
+            <div className="flex items-center justify-between gap-2 text-xs font-medium text-stone-500">
+              <span>Sizes available ({s.offerings.length})</span>
+              {s.sources.length > 0 && (
+                <span className="flex flex-wrap gap-1">
+                  {s.sources.map((src) => (
+                    <span
+                      key={src}
+                      className={
+                        'rounded px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide ' +
+                        (src === 'stauffers'
+                          ? 'bg-sky-100 text-sky-800'
+                          : 'bg-emerald-100 text-emerald-800')
+                      }
+                    >
+                      {sourceLabel(src)}
+                    </span>
+                  ))}
+                </span>
+              )}
             </div>
             <ul className="mt-0.5 flex flex-wrap gap-x-3 gap-y-0.5 text-xs text-stone-700">
               {s.offerings.map((o, i) => (
                 <li key={i} className="whitespace-nowrap">
                   {offeringLabel(o)}{' '}
                   <span className="font-semibold text-stone-900">${o.price.toFixed(0)}</span>
+                  {o.source && s.sources.length > 1 && (
+                    <span className="ml-1 text-stone-400">· {sourceLabel(o.source)}</span>
+                  )}
                 </li>
               ))}
             </ul>

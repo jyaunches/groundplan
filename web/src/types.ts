@@ -43,6 +43,7 @@ export type Species = {
 
   min_price: number | null
   max_price: number | null
+  sources: string[]
   offerings: Offering[]
 }
 
@@ -51,6 +52,8 @@ export type Offering = {
   container: string | null
   form: string | null
   price: number
+  source: string | null
+  image_local_path: string | null
 }
 
 export type Dataset = {
@@ -77,3 +80,48 @@ export type Filters = {
 
 export const PLANT_TYPES = ['Tree', 'Shrub', 'Vine', 'Perennial', 'Grass'] as const
 export const SUN_EXPOSURES = ['full sun', 'dappled', 'full shade'] as const
+
+// ============================================================
+// Plan view types — sourced from /api/plan or /plan.json
+// (vite plan-api middleware reads plan.yaml and enriches each plant
+// with `species_id` matched against the species table; null = mail-order.)
+// ============================================================
+export type PlanPlant = {
+  name: string
+  common_name?: string
+  quantity?: number
+  source?: string
+  role?: string
+  status?: string
+  target_size?: string
+  alternatives?: string[]
+  timing?: string
+  establishment_care?: string
+  species_id: number | null
+  // Wikimedia images for mail-order plants (species_id null), populated by
+  // find_plan_images.py and merged in by the vite plan-api middleware.
+  image_url?: string
+  image_thumb_url?: string
+  image_source_file?: string
+  image_confidence?: string
+  image_search_links?: { name: string; url: string }[]
+  // Catch-all for any extra YAML fields not modeled here.
+  [key: string]: unknown
+}
+
+export type PlanArea = {
+  name: string
+  slug: string
+  approx_sqft?: number
+  multiplier?: number
+  sun?: string
+  exposure?: string
+  deer_pressure?: string
+  theme?: string
+  notes?: string
+  palette_intent?: string
+  pre_purchase_checklist?: string
+  plants: PlanPlant[]
+}
+
+export type Plan = { areas: PlanArea[] }
