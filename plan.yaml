@@ -107,10 +107,10 @@ areas:
         role: Full-shade ground cover; fragrant white May flowers
 
       # Front-edge clumping border
-      - name: Liriope muscari
+      - name: Liriope muscari 'Big Blue'
         common_name: Lilyturf
         quantity: 10
-        source: Find elsewhere    # not in Diller catalog — local nursery or mail-order (Bluestone, Wayside)
+        source: Diller    # carried under the LIRIOPE section (catalog OCR mis-filed under LIATRIS); 'Big Blue' ~$5.50, also has 'Royal Purple' and 'Variegated'
         role: |
           Front-edge border; clean upright grass-like blades, lilac flower
           spikes Aug–Sep, handles afternoon sun + shaded pocket equally,
@@ -535,6 +535,14 @@ areas:
         3. Will they hold the specimen for 1–2 weeks while site is
            prepped (staking, mulch, hole dug)?
 
+      Site prep — propane tank clearance:
+        - Site the trunk at least 15 ft from the buried propane tank
+          (mature canopy ~10 ft, roots extend 1.5–2× dripline).
+        - Call 811 (PA One Call) before digging to mark the propane
+          line from tank to house — do not plant directly over it.
+        - Keep a clear truck approach to the tank's fill dome for
+          refills.
+
       Planting timing rationale: SPRING planting (not fall) for this
       site because our wind hits in autumn, not summer. A spring-
       planted tree gets a calm summer to establish roots before facing
@@ -581,12 +589,107 @@ areas:
 
   - name: Driveway lamp post bed
     slug: sp4_full_sun_driveway_lamp
-    sun: full sun                      # from dir name
+    approx_sqft: 70
+    sun: full sun                      # house-shaded until ~10:30am, then direct sun through afternoon (~6–7 hrs)
     exposure: |
-      TODO — photos in areas_originals/sp4_full_sun_driveway_lamp/.
-      Bed around the driveway lamp post. Confirm sqft, soil, and whether
-      water access is available.
-    plants: []                         # TODO
+      Bed around the driveway lamp post. House casts shade until
+      ~10:30am, after which the bed gets direct sun through the rest
+      of the day. Effectively full sun.
+    deer_pressure: high                # active browsing — existing hydrangea is being eaten
+    theme: deer-resistant — Phase 1 starts with a Geranium 'Rozanne' perimeter ribbon
+    notes: |
+      Existing hydrangea in this bed is being browsed by deer. Phase 1
+      strategy: surround it with deer-resistant aromatics and a low
+      perimeter ribbon to make the bed less inviting to walk into.
+      Starting with a full perimeter of Geranium 'Rozanne' (deer-skip,
+      May–frost bloom, sprawling habit) at 24" o.c. — Rozanne reaches
+      30"+ wide, so anything tighter tangles. Confirm bed shape on
+      site walk; quantity assumes ~34 linear ft of perimeter.
+
+      Inner-bed deer-deterrent layer (Phase 2, TBD): Stauffer's
+      candidates flagged include Salvia 'Violet Profusion', Achillea
+      'Strawberry Seduction', and Buddleia 'Miss Violet' as a
+      companion shrub anchor. Optionally Clematis 'Niobe' climbing
+      the lamp post itself.
+
+    plants:
+      # Phase 1 — perimeter ribbon
+      - name: Geranium 'Rozanne'
+        common_name: Rozanne Hardy Geranium / Cranesbill
+        quantity: 18
+        source: Diller
+        target_size: "#1 container, $9 ea"
+        role: |
+          Deer-resistant perimeter ribbon. Violet-blue saucer flowers
+          May through frost (one of the longest-blooming perennials
+          in cultivation), 18" tall × 30"+ sprawl, full sun, hardy
+          zone 5–8. Spaced at 24" o.c. around the ~34 ft perimeter of
+          the 70 sqft bed. Forms a continuous low ring that deer
+          generally walk around rather than into.
+        timing: spring planting; cut back hard mid-summer if foliage flops
+
+      # Mid-bed clumps — fall bloom + structure
+      - name: Sedum 'Autumn Joy'
+        common_name: Autumn Joy Stonecrop
+        quantity: 5
+        source: Diller
+        target_size: "$6.50 ea (likely single #1 containers — confirm with Diller)"
+        role: |
+          Upright clumping sedum, 18–24" tall × 18" wide. Pink broccoli-
+          like flower heads emerging in late summer, deepening to rust-
+          red in fall, holding their structure into winter. Deer-
+          resistant, drought-tolerant, pollinator magnet. Place as
+          accent clumps inside the Geranium ring for fall bloom and
+          winter silhouette when everything else has died back.
+
+      # Focal flowering shrub — yellow-orange spring bloom
+      - name: Rhododendron 'Capistrano'
+        common_name: Capistrano Rhododendron
+        quantity: 1
+        source: Stauffer's
+        target_size: "#3 container, $39.99"
+        role: |
+          Focal anchor inside the Geranium ring — pale yellow blooms
+          (buds open peach, fade to soft yellow) in May. Matures
+          ~4–5 ft × 4–5 ft, evergreen, prefers acidic well-drained
+          soil. Deer caveat: rhodos are only moderately deer-tolerant,
+          not deer-proof — siting it inside the Geranium 'Rozanne'
+          perimeter ribbon reduces casual browsing, but expect some
+          winter sampling in heavy-pressure years. Pair with bone
+          meal at planting and keep mulched to maintain the acid
+          soil it wants.
+
+      # Mid-bed white coneflowers — pollinator + deer-resistant accent
+      - name: Echinacea 'Pow Wow White'
+        common_name: Pow Wow White Coneflower
+        quantity: 3
+        source: Diller
+        target_size: "#1 container, $6.50–7.50 ea"
+        role: |
+          Compact white coneflower, 18–24" tall × 16–20" wide. White
+          petals with golden cone, June through September, very long
+          bloom. Reliably deer-resistant (Echinacea is one of the few
+          flowering perennials deer truly avoid), drought-tolerant
+          once established, pollinator and goldfinch magnet (leave
+          seed heads through fall/winter for the birds). Place as a
+          mid-height layer between the Sedum 'Autumn Joy' clumps —
+          white reads cleanly against the violet-blue Geranium ring
+          and the yellow Capistrano blooms.
+
+      # Inner-bed groundcover — low carpet around hydrangea drip line
+      - name: Sedum spurium 'Dragon's Blood'
+        common_name: Dragon's Blood Stonecrop
+        quantity: 1                       # one flat (~30–50 plugs)
+        source: Diller
+        target_size: "$29.50 — almost certainly a flat/tray; confirm plug count with Diller"
+        role: |
+          Low creeping succulent groundcover, 3–6" tall, red-tinged
+          foliage with magenta star-flowers in summer. Deer-resistant,
+          drought-tolerant, evergreen-ish in mild winters. Fills the
+          inner-bed floor around the existing hydrangea's drip line
+          and between Autumn Joy clumps. Plant plugs at 8–10" o.c.;
+          fills in by year 2. One flat should comfortably cover the
+          inner-bed area minus the hydrangea footprint.
 
   - name: Main stairs bed
     slug: sp6_full_sun_main_stairs
